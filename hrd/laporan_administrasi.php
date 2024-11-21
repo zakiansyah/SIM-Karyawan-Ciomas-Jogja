@@ -2,12 +2,12 @@
     error_reporting(0);
 
     if (isset($_POST['submit'])) {
-    $date1 = $_POST['txtdari'];
-    $date2 = $_POST['txtsampai'];
+        $date1 = $_POST['txtdari'];
+        $date2 = $_POST['txtsampai'];
 
         if (!empty($date1) && !empty($date2)) {
-        // perintah tampil data berdasarkan range tanggal
-        $query_tampil = mysqli_query($koneksi, "SELECT users.*, pelamars.*, lamarans.*, lowongans.*
+            // perintah tampil data berdasarkan range tanggal
+            $query_tampil = mysqli_query($koneksi, "SELECT users.*, pelamars.*, lamarans.*, lowongans.*
                         FROM users
                         JOIN pelamars
                         ON pelamars.id_user=users.id_user
@@ -19,8 +19,8 @@
                         AND lamarans.tgl_lamaran BETWEEN '$date1' and '$date2'
                         ORDER BY tgl_lamaran ASC");
         } else {
-        // perintah tampil semua data
-        $query_tampil = mysqli_query($koneksi, "SELECT users.*, pelamars.*, lamarans.*, lowongans.*
+            // perintah tampil semua data
+            $query_tampil = mysqli_query($koneksi, "SELECT users.*, pelamars.*, lamarans.*, lowongans.*
                         FROM users
                         JOIN pelamars
                         ON pelamars.id_user=users.id_user
@@ -28,7 +28,7 @@
                         ON lamarans.id_pelamar=pelamars.id_pelamar
                         JOIN lowongans
                         ON lowongans.id_lowongan=lamarans.id_lowongan
-                        WHERE lamarans.keputusan='Diterima'"); 
+                        WHERE lamarans.keputusan='Diterima'");
         }
     } else {
         // perintah tampil semua data
@@ -42,8 +42,8 @@
                         ON lowongans.id_lowongan=lamarans.id_lowongan
                         WHERE lamarans.keputusan='Diterima'");
     }
-
 ?>
+
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <div class="container-fluid">
@@ -112,6 +112,7 @@
                     ?>
                 <tr>
                     <td><?php echo $no; ?></td>
+                    <!-- Mengambil nama pelamar dari kolom 'nama' pada tabel users -->
                     <td><?php echo $data['nama']; ?></td>
                     <td><?php echo $data['nama_lowongan']; ?></td>
                     <td><?php echo date('d F Y', strtotime($data['tgl_lamaran'])); ?></td>
@@ -121,7 +122,7 @@
                             <span class="badge badge-primary">Menunggu Proses</span>
                             <?php } else if($data['keputusan'] == 'Diterima'){ ?>
                             <span class="badge badge-success"><?php echo $data['keputusan']; ?></span>
-                            <?php } else {?>
+                            <?php } else { ?>
                             <span class="badge badge-danger"><?php echo $data['keputusan']; ?></span>
                         <?php }?>
                     </td>
@@ -152,3 +153,4 @@
     <!-- /.container-fluid -->
 </section>
 <!-- /.content -->
+ b

@@ -16,7 +16,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="https://kompaskerja.com/wp-content/uploads/2019/09/logo-japfa-630x380.jpg">
-  <title>PT. Ciomas Adisatwa | Profil</title>
+  <title>PT. Ciomas Adisatwa | Home</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -74,12 +74,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </ol>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img class="d-block w-100" src="dist/img/yukcoding1.jpg" alt="First slide">
+                      <img class="d-block w-100" src="./assets/img/tampak depan pt.jpg" alt="First slide">
                       <div class="carousel-caption d-none d-md-block">
                       </div>
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block w-100" src="dist/img/yukcoding2.jpg" alt="Second slide">
+                      <img class="d-block w-100" src="./assets/img/luar depan.jpg" alt="Second slide">
+                      <div class="carousel-caption d-none d-md-block">
+                        
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="./assets/img/gambar jalan.jpg" alt="Second slide">
                       <div class="carousel-caption d-none d-md-block">
                         
                       </div>

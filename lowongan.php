@@ -15,7 +15,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="https://kompaskerja.com/wp-content/uploads/2019/09/logo-japfa-630x380.jpg">
-  <title>PT. Ciomas Adisatwa | Profil</title>
+  <title>PT. Ciomas Adisatwa | Lowongan</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -89,7 +89,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         ?>
                     <tr>
                         <td><?php echo $no; ?></td>
-                        <td><?php echo $data['nama']; ?></td>
+                        <td><?php echo $data['nama_lowongan']; ?></td>
                         <td><?php echo $data['kategori']; ?></td>
                         <td>Post <?php echo date('d F Y', strtotime($data['tgl_post'])); ?> - Deadline <?php echo date('d F Y', strtotime($data['tgl_deadline'])); ?></td>
                         <td>
@@ -102,13 +102,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             }
                         ?>
                     </tbody>
-                    <tfoot>
-                    <th>No</th>
-                    <th>Nama Lowongan</th>
-                    <th>Kategori</th>
-                    <th>Tanggal</th>
-                    <th>Aksi</th>
-                    </tfoot>
+
                 </table>
                 </div>
             </div>
