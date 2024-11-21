@@ -553,50 +553,93 @@ scratch. This page gets rid of all links and provides the needed markup only.
       theme: 'bootstrap4'
     });
   </script>
-  <!-- <script>
-    $(document).ready(function() {
-      $.ajax({
-        type: 'post',
-        url: 'dataprovinsi.php',
-        success: function(hasil_provinsi) {
-          $("select[name=nama_provinsi]").html(hasil_provinsi);
-        }
-      });
-      $("select[name=nama_provinsi]").on("change", function() {
-        var id_provinsi_terpilih = $("option:selected", this).attr("id_provinsi");
-        $.ajax({
-          type: 'post',
-          url: 'datakabupaten.php',
-          data: 'id_provinsi=' + id_provinsi_terpilih,
-          success: function(hasil_kabupaten) {
-            $("select[name=nama_kabupaten]").html(hasil_kabupaten);
-          }
-        })
-      })
-      $("select[name=nama_kabupaten]").on("change", function() {
-        var id_kabupaten_terpilih = $("option:selected", this).attr("id_kabupaten");
-        $.ajax({
-          type: 'post',
-          url: 'datakecamatan.php',
-          data: 'id_kabupaten=' + id_kabupaten_terpilih,
-          success: function(hasil_kecamatan) {
-            $("select[name=nama_kecamatan]").html(hasil_kecamatan);
-          }
-        })
-      })
-      $("select[name=nama_kecamatan]").on("change", function() {
-        var id_kecamatan_terpilih = $("option:selected", this).attr("id_kecamatan");
-        $.ajax({
-          type: 'post',
-          url: 'datadesa.php',
-          data: 'id_kecamatan=' + id_kecamatan_terpilih,
-          success: function(hasil_desa) {
-            $("select[name=nama_desa]").html(hasil_desa);
-          }
-        })
-      })
+  <script>
+   $(document).ready(function () {
+    // Fetch provinces on page load
+    $.ajax({
+      type: 'POST',
+      url: 'dataprovinsi.php',
+      success: function (hasil_provinsi) {
+        // Populate the dropdown
+        $("select[name=nama_provinsi]").html('<option value="">Pilih Provinsi</option>' + hasil_provinsi);
+      },
+      error: function (xhr, status, error) {
+        console.error("Error fetching provinces: ", error);
+        alert("Gagal memuat data provinsi.");
+      },
     });
-  </script> -->
+  
+
+    // When a province is selected, fetch data for districts
+    $("select[name=nama_provinsi]").on("change", function () {
+      var id_provinsi_terpilih = $("option:selected", this).attr("id_provinsi");
+
+      if (id_provinsi_terpilih) {
+        $.ajax({
+          type: 'POST',
+          url: 'datakabupaten.php',
+          data: { id_provinsi: id_provinsi_terpilih },
+          success: function (hasil_kabupaten) {
+            $("select[name=nama_kabupaten]").html(hasil_kabupaten);
+          },
+          error: function (xhr, status, error) {
+            console.error("Error fetching districts: ", error);
+            alert("Gagal memuat data kabupaten.");
+          },
+        });
+      } else {
+        $("select[name=nama_kabupaten]").html('<option value="">Pilih Kabupaten</option>');
+      }
+    });
+
+    // When a district is selected, fetch data for sub-districts
+    $("select[name=nama_kabupaten]").on("change", function () {
+      var id_kabupaten_terpilih = $("option:selected", this).attr("id_kabupaten");
+
+      if (id_kabupaten_terpilih) {
+        $.ajax({
+          type: 'POST',
+          url: 'datakecamatan.php',
+          data: { id_kabupaten: id_kabupaten_terpilih },
+          success: function (hasil_kecamatan) {
+            $("select[name=nama_kecamatan]").html(hasil_kecamatan);
+          },
+          error: function (xhr, status, error) {
+            console.error("Error fetching sub-districts: ", error);
+            alert("Gagal memuat data kecamatan.");
+          },
+        });
+      } else {
+        $("select[name=nama_kecamatan]").html('<option value="">Pilih Kecamatan</option>');
+      }
+    });
+
+    // When a sub-district is selected, fetch data for villages
+    $("select[name=nama_kecamatan]").on("change", function () {
+      var id_kecamatan_terpilih = $("option:selected", this).attr("id_kecamatan");
+
+      if (id_kecamatan_terpilih) {
+        $.ajax({
+          type: 'POST',
+          url: 'datadesa.php',
+          data: { id_kecamatan: id_kecamatan_terpilih },
+          success: function (hasil_desa) {
+            $("select[name=nama_desa]").html(hasil_desa);
+          },
+          error: function (xhr, status, error) {
+            console.error("Error fetching villages: ", error);
+            alert("Gagal memuat data desa.");
+          },
+        });
+      } else {
+        $("select[name=nama_desa]").html('<option value="">Pilih Desa</option>');
+      }
+    });
+  });
+</script>
+
+
+
 </body>
 
 </html>
