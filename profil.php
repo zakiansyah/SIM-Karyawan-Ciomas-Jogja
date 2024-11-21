@@ -145,17 +145,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                               <div class="card-body">
                                 <div class="tab-content">
                                   <div class="active tab-pane" id="profil">
-                                    <!-- Post -->
-                                    <?php
-                                    $sql_tampil_profil = "SELECT users.*, pelamars.*
-                                    FROM users
-                                    JOIN pelamars
-                                    ON pelamars.id_user=users.id_user
-                                    JOIN lamarans
-                                    WHERE users.id_user='$_SESSION[id_user]'";
-                                    $query_tampil_profil = mysqli_query($koneksi, $sql_tampil_profil);
-                                    $data_profil = mysqli_fetch_array($query_tampil_profil, MYSQLI_BOTH);
-                                    ?>
+                                  <?php
+$sql_tampil_profil = "SELECT users.*, pelamars.*
+                      FROM users
+                      JOIN pelamars ON pelamars.id_user = users.id_user
+                      WHERE users.id_user = '$_SESSION[id_user]'";
+$query_tampil_profil = mysqli_query($koneksi, $sql_tampil_profil);
+$data_profil = mysqli_fetch_array($query_tampil_profil, MYSQLI_BOTH);
+
+// Tambahkan pengecekan apakah data ditemukan
+if (!$data_profil) {
+    echo "Data profil tidak ditemukan.";
+    exit;
+}
+?>
                                     <table>
                                       <tr>
                                         <td width="200px">Tempat Tanggal Lahir</td>

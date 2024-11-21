@@ -9,7 +9,7 @@ if (!$id_provinsi_terpilih) {
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-    CURLOPT_URL => 'https://api.rajaongkir.com/starter/city?province=' . $id_provinsi_terpilih,
+    CURLOPT_URL => 'https://api.binderbyte.com/wilayah/kabupaten?api_key=d9c4a1cc88cfd3ab49398e355f14b18e80edb2bc68a7355cbba9ce2307389e8f&id_provinsi=' . $id_provinsi_terpilih,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => '',
     CURLOPT_MAXREDIRS => 10,
@@ -18,7 +18,7 @@ curl_setopt_array($curl, array(
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
     CURLOPT_CUSTOMREQUEST => 'GET',
     CURLOPT_HTTPHEADER => array(
-        'key: a57a1ac3fa364e3d6383d2ae79f2ffde',
+        'key: d9c4a1cc88cfd3ab49398e355f14b18e80edb2bc68a7355cbba9ce2307389e8f',
     ),
 ));
 
@@ -34,34 +34,19 @@ if ($err) {
 
 $array_response = json_decode($response, TRUE);
 
-// Cek apakah status respons berhasil
-if (isset($array_response['rajaongkir']['status']['code'])) {
-    $status_code = $array_response['rajaongkir']['status']['code'];
-    $status_description = $array_response['rajaongkir']['status']['description'];
+// Cek apakah respons berhasil
+if (isset($array_response['code']) && $array_response['code'] === "200") {
+    $datakabupaten = $array_response['value'];
 
-    if ($status_code === 200) {
-        // Respons berhasil, tampilkan data kabupaten/kota
-        $datakabupaten = $array_response['rajaongkir']['results'];
+    echo "<option value=''>Pilih Kabupaten/Kota</option>";
 
-        echo "<option value=''>Pilih Kabupaten/Kota</option>";
-
-        if (is_array($datakabupaten)) {
-            foreach ($datakabupaten as $tiap_kabupaten) {
-                echo "<option value='" . htmlspecialchars($tiap_kabupaten['city_id']) . "'>";
-                echo htmlspecialchars($tiap_kabupaten['city_name']);
-                echo "</option>";
-            }
-        } else {
-            // Jika hanya ada satu kabupaten
-            echo "<option value='" . htmlspecialchars($datakabupaten['city_id']) . "'>";
-            echo htmlspecialchars($datakabupaten['city_name']);
-            echo "</option>";
-        }
-    } else {
-        // Respons gagal dengan deskripsi status
-        echo "<option value=''>Error: " . htmlspecialchars($status_description) . "</option>";
+    foreach ($datakabupaten as $tiap_kabupaten) {
+        echo "<option value='" . htmlspecialchars($tiap_kabupaten['id']) . "' id_kabupaten='" . htmlspecialchars($tiap_kabupaten['id']) . "'>";
+        echo htmlspecialchars($tiap_kabupaten['name']);
+        echo "</option>";
     }
 } else {
-    echo "<option value=''>Format respons tidak valid</option>";
+    // Respons gagal
+    echo "<option value=''>Error: Gagal mengambil data kabupaten</option>";
 }
 ?>

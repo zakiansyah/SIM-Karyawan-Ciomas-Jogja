@@ -3,7 +3,7 @@ $id_provinsi_terpilih = $_POST['id_kecamatan'];
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://api.binderbyte.com/wilayah/kelurahan?api_key=58248fe8b7fd249f89eb8ad57b83b40af715a8be268d703f421bac892d19aabc&id_kecamatan='.$id_provinsi_terpilih,
+  CURLOPT_URL => 'https://api.binderbyte.com/wilayah/kelurahan?api_key=d9c4a1cc88cfd3ab49398e355f14b18e80edb2bc68a7355cbba9ce2307389e8f&id_kecamatan='.$id_provinsi_terpilih,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -12,7 +12,7 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_HTTPHEADER => array(
-    'key:58248fe8b7fd249f89eb8ad57b83b40af715a8be268d703f421bac892d19aabc'
+    'key:d9c4a1cc88cfd3ab49398e355f14b18e80edb2bc68a7355cbba9ce2307389e8f'
   ),
 ));
 
