@@ -3,7 +3,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://api.rajaongkir.com/starter/province', // Hapus tanda kutip ganda ekstra
+  CURLOPT_URL => 'https://api.binderbyte.com/wilayah/provinsi?api_key=d9c4a1cc88cfd3ab49398e355f14b18e80edb2bc68a7355cbba9ce2307389e8f',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -12,7 +12,7 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => 'GET',
   CURLOPT_HTTPHEADER => array(
-    'key: a57a1ac3fa364e3d6383d2ae79f2ffde'
+    'key: d9c4a1cc88cfd3ab49398e355f14b18e80edb2bc68a7355cbba9ce2307389e8f'
   ),
 ));
 
@@ -25,24 +25,17 @@ if ($err) {
   echo "cURL Error #:" . $err;
 } else {
   $array_response = json_decode($response, TRUE);
-  // Sesuaikan dengan struktur JSON yang benar
-  $dataprovinsi = $array_response['rajaongkir']['results'];
+  
+  // Sesuaikan dengan struktur JSON yang baru
+  $dataprovinsi = $array_response['value'];
 
   echo "<option value=''>Pilih Provinsi</option>";
 
-  // Jika mengambil satu provinsi
-  if (isset($dataprovinsi['province_id'])) {
-    echo "<option value='" . $dataprovinsi['province'] . "' id_provinsi='" . $dataprovinsi['province_id'] . "'>";
-    echo $dataprovinsi['province'];
+  // Iterasi melalui array provinsi
+  foreach($dataprovinsi as $tiap_provinsi) {
+    echo "<option value='" . $tiap_provinsi['name'] . "' id_provinsi='" . $tiap_provinsi['id'] . "'>";
+    echo $tiap_provinsi['name'];
     echo "</option>";
-  } 
-  // Jika mengambil semua provinsi (akan berbentuk array)
-  else if (is_array($dataprovinsi)) {
-    foreach($dataprovinsi as $tiap_provinsi) {
-      echo "<option value='" . $tiap_provinsi['province'] . "' id_provinsi='" . $tiap_provinsi['province_id'] . "'>";
-      echo $tiap_provinsi['province'];
-      echo "</option>";
-    }
   }
 }
 ?>
