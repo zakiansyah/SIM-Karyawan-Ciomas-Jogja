@@ -15,9 +15,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="assets/img/yc.png">
- <title>Yuk Coding Rekrutmen | Tentang</title>
-
+  <link rel="icon" type="image/x-icon" href="https://kompaskerja.com/wp-content/uploads/2019/09/logo-japfa-630x380.jpg">
+  <title>PT. Ciomas Adisatwa | Tentang</title>
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
@@ -49,7 +48,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="container">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0"> Tentang Yuk Coding Media</h1>
+              <h1 class="m-0"> Tentang PT. CIOMAS ADISATYA</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
@@ -74,11 +73,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
                 <div class="card-body">
 
-                  <p>YukCoding Media adalah pengembangan aplikasi layanan tim profesional, kursus pemrograman, dan tutorial (web, seluler, desktop, dll). Kami memberikan lebih banyak tutorial gratis karena kami ingin berkontribusi untuk meningkatkan keterampilan generasi muda.</p>
+                  
                   <p>
-                    Kami membuka layanan pengembangan aplikasi. Setiap orang dapat memesan aplikasi dengan kesepakatan. Kami akan melakukannya sebaik mungkin.
-                    Kami juga menjual beberapa kode sumber aplikasi untuk pengkodean referensi. Itu tidak mahal.
-                    Kursus : <a href="https://yukcoding.co.id/on">yukcoding.co.id/on</a></p>
+                    PT Ciomas Adisatwa atau yang dikenal dengan Japfa merupakan perusahaan yang bergerak dibidang agribisnis yang telah melebarkan sayap bisnisnya di luar negeri yaitu di Singapura, China, India, Vietnam dan Myanmar.
+
+                    PT Ciomas Adisatwa berdiri sejak tahun 1993 dan masih beroperasi hingga saat ini. </p><p> Perusahaan ini dikenal oleh masyarakat sebagai produsen produk-produk olahan protein hewani, seperti karkas ayam yang segar.
+
+                    PT Ciomas Adisatwa berlokasi di Bogor, Indonesia. Produk karkas ayam yang dijualnya merupakan daging ayam segar dan higienis, dan terjamin kualitasnya. Pemasaran dari perusahaan ini sampai ke seluruh Indonesia.
+                  </p>
                 </div>
               </div>
               <div class="card card-primary card-outline">
