@@ -71,14 +71,6 @@
                                 }
                                 ?>
                             </tbody>
-                            <tfoot>
-                                <th>No</th>
-                                <th>Nama Pelamar</th>
-                                <th>Nilai Ujian</th>
-                                <th>Nilai Wawancara</th>
-                                <th>Hasil</th>
-                                <th>Aksi</th>
-                            </tfoot>
                         </table>
                     </div>
                     <!-- /.card-body -->

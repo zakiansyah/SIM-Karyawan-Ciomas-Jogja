@@ -210,6 +210,7 @@ if (!$data_profil) {
                                       $query_tampil_profil = mysqli_query($koneksi, $sql_tampil_profil);
                                       $data_profil = mysqli_fetch_array($query_tampil_profil, MYSQLI_BOTH);
                                       ?>
+                                      
                                       <div class="row">
                                         <div class="col-md-6">
                                           <div class="form-group">
@@ -294,7 +295,6 @@ if (!$data_profil) {
                                               <option <?php if ($data_profil['agama'] == 'Konghuchu') {
                                                         echo "selected";
                                                       } ?> value='Konghuchu'>Konghuchu</option>
-
                                             </select>
                                           </div>
                                         </div>

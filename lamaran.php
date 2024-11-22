@@ -129,14 +129,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             }
                         ?>
                     </tbody>
-                    <tfoot>
-                    <th>No</th>
-                    <th>Nama Lowongan</th>
-                    <th>Kategori</th>
-                    <th>Tanggal Daftar</th>
-                    <th>Keterangan</th>
-                    <th>Aksi</th>
-                    </tfoot>
                 </table>
                 </div>
             </div>

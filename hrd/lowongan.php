@@ -50,7 +50,7 @@
                     ?>
                 <tr>
                     <td><?php echo $no; ?></td>
-                    <td><?php echo $data['nama']; ?></td>
+                    <td><?php echo $data['nama_lowongan']; ?></td>
                     <td><?php echo $data['kategori']; ?></td>
                     <td>Post <?php echo date('d F Y', strtotime($data['tgl_post'])); ?> - Deadline <?php echo date('d F Y', strtotime($data['tgl_deadline'])); ?></td>
                     <td>
@@ -65,13 +65,6 @@
                         }
                     ?>
                 </tbody>
-                <tfoot>
-                <th>No</th>
-                <th>Nama Lowongan</th>
-                <th>Kategori</th>
-                <th>Tanggal</th>
-                <th>Aksi</th>
-                </tfoot>
             </table>
             </div>
             <!-- /.card-body -->

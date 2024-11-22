@@ -85,14 +85,6 @@
                         }
                     ?>
                 </tbody>
-                <tfoot>
-                <th>No</th>
-                <th>Nama</th>
-                <th>Nama Lowongan</th>
-                <th>Tanggal Lamaran</th>
-                <th>Status Lamaran</th>
-                <th>Aksi</th>
-                </tfoot>
             </table>
             </div>
             <!-- /.card-body -->

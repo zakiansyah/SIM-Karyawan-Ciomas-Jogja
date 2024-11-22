@@ -351,21 +351,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <h2 class="section-title" data-aos="fade-up">Produk Berkualitas Kami</h2>
       <div class="products-grid">
         <div class="product-card" data-aos="fade-up">
-          <img src="/api/placeholder/400/300" alt="Ayam Segar" class="product-img">
+          <img src="./assets/img/Ayam Segar.jpg" alt="Ayam Segar" class="product-img">
           <div class="product-info">
             <h3>Ayam Segar</h3>
             <p>Unggas segar dengan proses higienis yang terjamin.</p>
           </div>
         </div>
         <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-          <img src="/api/placeholder/400/300" alt="Olahan Ayam" class="product-img">
+          <img src="./assets/img/Olahan Ayam.png" alt="Olahan Ayam" class="product-img">
           <div class="product-info">
             <h3>Olahan Ayam</h3>
             <p>Berbagai produk olahan seperti nugget dan sosis.</p>
           </div>
         </div>
         <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-          <img src="/api/placeholder/400/300" alt="Pakan Ternak" class="product-img">
+          <img src="./assets/img/Pakan Ayam.png" style="width: 400px; height: 200px; object-fit: cover;" alt="Pakan Ternak" class="product-img">
           <div class="product-info">
             <h3>Pakan Ternak</h3>
             <p>Pakan berstandar tinggi untuk hasil terbaik.</p>
@@ -373,6 +373,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
       </div>
     </section>
+
+    <div class="container text-center">
+  <div class="row">
+    <div class="col-6">
+      Column
+    </div>
+    <div class="col-6">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+  </div>
+</div>
 
     <section id="quality">
       <h2 class="section-title" data-aos="fade-up">Kualitas Adalah Prioritas Kami</h2>
@@ -382,11 +396,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <ul>
             <li>Sertifikasi ISO</li>
             <li>HACCP Certified</li>
-            <li>Good Manufacturing Practice</li>
           </ul>
         </div>
         <div data-aos="fade-left">
-          <img src="/api/placeholder/600/400" alt="Proses Produksi" style="width: 100%; border-radius: 10px;">
+          <img src="./assets/img/Proses Produksi.jpg
+          " alt="Proses Produksi" style="width: 100%; border-radius: 10px;">
         </div>
       </div>
     </section>
