@@ -63,12 +63,6 @@
                         }
                     ?>
                 </tbody>
-                <tfoot>
-                <th>No</th>
-                <th>Judul Pengumuman</th>
-                <th>Tanggal Post</th>
-                <th>Aksi</th>
-                </tfoot>
             </table>
             </div>
             <!-- /.card-body -->

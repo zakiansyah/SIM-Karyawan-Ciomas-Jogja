@@ -116,13 +116,6 @@ if (isset($_POST['submit'])) {
                                 }
                                 ?>
                             </tbody>
-                            <tfoot>
-                                <th>No</th>
-                                <th>Tanggal</th>
-                                <th>Nama Pelamar</th>
-                                
-                                <th>Hasil</th>
-                            </tfoot>
                         </table>
                     </div>
                     <!-- /.card-body -->
