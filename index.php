@@ -343,6 +343,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <p>Meningkatkan gizi masyarakat melalui penyediaan protein hewani asal daging ayam yang Halal, Aman, utuh, Sehat, dan Berkualitas</p>
           <p>Memberikan kontribusi laba yang optimal kepada JAPFA Group</p>
           <p>Meningkatkan kesejahteraan karyawan, Mitra Usaha, dan Masyarakat Sekitar</p>
+          <p>zaki eska dika</p>
         </div>
       </div>
     </section>
