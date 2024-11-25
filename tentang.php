@@ -85,31 +85,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
               <div class="card card-primary card-outline">
                 <div class="card-header">
-                  <h5 class="card-title m-0">Contak</h5>
+                  <h5 class="card-title m-0">Kontak</h5>
                 </div>
                 <div class="card-body">
-
-                  <p>Jangan lupa like fanspage kami <a href="https://fb.com/yukcoding">fb.com/yukcoding</a></p>
-                  <p>Subscribe channel youtube kami <a href="https://youtube.com/yukcoding2">youtube.com/yukcoding2</a></p>
-
-
-                  <p>Bagi yang ingin berdiskusi / masuk YukCoding Forum silakan bisa join :</p>
-                  <p>- Channel telegram @yukcoding / <a href="https://t.me/yukcoding">t.me/yukcoding</a></p>
-                  <p>- Grup telegram @yukcodingID / <a href="https://t.me/yukcodingid">t.me/yukcodingid</a></p>
-                  <p>
-                    Untuk order source code, jasa pembuatan web / aplikasi, donasi, kerjasama, mitra programmer, kritik, saran, request tutorial, konsultasi pemrograman dan hal penting lainnya silakan menghubungi kami melalui :
-                  </p>
-                  <p>Facebook : <a href="https://fb.com/yukcoding">fb.com/yukcoding</a> (recommended)</p>
-                  <p>Instagram : <a href="https://www.instagram.com/yukcoding/">@yukcoding</a></p>
-                  <p>WA : <a href="https://api.whatsapp.com/send?phone=6281225764094">+62812-2576-4094</a></p>
-                  <p>Email : dev.yukcoding@gmail.com</>
-                  </p>
-
-                  <p>Official : <a href="https://yukcoding.co.id/on">yukcoding.co.id/on</a></p>
-
-                  * Silakan pergunakan bahasa yang baik dan sopan.
-
-                  Mohon maaf yang sebesar-besarnya dan harap maklum apabila respon kami terkadang agak lama, karena admin juga memiliki aktivitas dan kesibukan lainnya..</p>
+                  <p>Email: info@ciomas-adisatwa.com</p>
+                  <p>Telepon: (021) XXX-XXXX</p>
                 </div>
               </div>
             </div>
@@ -139,11 +119,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main Footer -->
     <footer class="main-footer">
       <!-- To the right -->
-      <div class="float-right d-none d-sm-inline">
-        Anything you want
-      </div>
+      
       <!-- Default to the left -->
-      <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+      <strong>Copyright &copy; 2024 <a href="https://adminlte.io">TIM MPTI</a>.</strong> All rights reserved.
     </footer>
   </div>
   <!-- ./wrapper -->

@@ -101,7 +101,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         /* Sections */
         section {
-            padding: 5rem 5%;
+            padding: 3rem 5%;
         }
 
         .section-title {
@@ -112,20 +112,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
         }
 
         /* About Section */
-        .timeline {
+        .timelinee {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin: 3rem 0;
         }
 
-        .timeline-item {
+        .timelinee-item {
             background: #f9f9f9;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
-
+        .certificate {
+            margin: 20px 0;
+            text-align: center;
+          }
+        .certificate-img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+          }
         /* Products Section */
         .products-grid {
             display: grid;
@@ -260,19 +268,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- /.navbar -->
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+    <div class="content-wrapper" style="margin-top: 85px;">
 
       <!-- Content Header (Page header) -->
-      <div class="content-header">
+      <div class="content-header" style="margin-top: 50px;">
         <div class="container">
           <div class="row mb-2">
-            <div class="col-sm-6">
+            <div class="col-sm-10">
               <h1 class="m-0"> Home </h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-              </ol>
+              
             </div><!-- /.col -->
           </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -333,17 +339,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- /.content-wrapper -->
     <section id="about">
       <h2 class="section-title" data-aos="fade-up">Siapa Kami?</h2>
-      <div class="timeline">
-        <div class="timeline-item" data-aos="fade-right">
+      <div class="timelinee">
+        <div class="timelinee-item" data-aos="fade-right">
           <h3>Visi Kami</h3>
           <p>Menjadi Perusahaan Interrated Poultry Processing terbesar di Indonesia, Serta menghasilkan protein hewani yang Halal, Aman, Utuh, Sehat, dan Berkualitas</p>
         </div>
-        <div class="timeline-item" data-aos="fade-left">
-          <h3>Misi Kami</h3>
-          <p>Meningkatkan gizi masyarakat melalui penyediaan protein hewani asal daging ayam yang Halal, Aman, utuh, Sehat, dan Berkualitas</p>
-          <p>Memberikan kontribusi laba yang optimal kepada JAPFA Group</p>
-          <p>Meningkatkan kesejahteraan karyawan, Mitra Usaha, dan Masyarakat Sekitar</p>
-          <p>zaki eska dika</p>
+        <div class="timelinee-item" data-aos="fade-left">
+          <h3><ul>Misi Kami</ul></h3>
+          <li>Meningkatkan gizi masyarakat melalui penyediaan protein hewani asal daging ayam yang Halal, Aman, utuh, Sehat, dan Berkualitas</li>
+          <li>Memberikan kontribusi laba yang optimal kepada JAPFA Group</li>
+          <li>Meningkatkan kesejahteraan karyawan, Mitra Usaha, dan Masyarakat Sekitar</li>
         </div>
       </div>
     </section>
@@ -374,24 +379,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
       </div>
     </section>
-
     <div class="container text-center">
-  <div class="row">
-    <div class="col-6">
-      Column
-    </div>
-    <div class="col-6">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-  </div>
 </div>
 
-    <section id="quality">
+    <section id="certificate">
       <h2 class="section-title" data-aos="fade-up">Kualitas Adalah Prioritas Kami</h2>
-      <div class="quality-content">
+      <div class="certificate">
         <div data-aos="fade-right">
           <h3>Standar Internasional</h3>
           <ul>
@@ -408,12 +401,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <section id="sustainability">
       <h2 class="section-title" data-aos="fade-up">Bergerak untuk Masa Depan yang Berkelanjutan</h2>
-      <div class="timeline">
-        <div class="timeline-item" data-aos="fade-up">
+      <div class="timelinee">
+        <div class="timelinee-item" data-aos="fade-up">
           <h3>Manajemen Limbah</h3>
           <p>Implementasi sistem pengolahan limbah ramah lingkungan.</p>
         </div>
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="timelinee-item" data-aos="fade-up" data-aos-delay="100">
           <h3>Program CSR</h3>
           <p>Pemberdayaan masyarakat lokal melalui berbagai program sosial.</p>
         </div>
@@ -438,7 +431,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="footer-grid">
         <div>
           <h3>PT Ciomas Adisatwa</h3>
-          <p>Bagian dari Grup Japfa</p>
+          <p>Bagian dari Japfa Group</p>
         </div>
         <div>
           <h3>Kontak</h3>
@@ -532,11 +525,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main Footer -->
     <footer class="main-footer">
       <!-- To the right -->
-      <div class="float-right d-none d-sm-inline">
-        Anything you want
-      </div>
+      
       <!-- Default to the left -->
-      <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+      <strong>Copyright &copy; 2024 <a href="https://adminlte.io">TIM MPTI</a>.</strong> All rights reserved.
     </footer>
   </div>
   <!-- ./wrapper -->
