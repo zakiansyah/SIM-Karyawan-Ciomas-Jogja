@@ -255,6 +255,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
         .animate-fade-in {
             animation: fadeIn 1s ease-out;
         }
+
+        .img-reduced {
+          width: 50%; /* Mengurangi ukuran gambar menjadi 50% */
+          height: auto; /* Memastikan proporsi tetap terjaga */
+          display: block; /* Mengatur gambar sebagai elemen blok */
+          margin: 0 auto; /* Memusatkan gambar di dalam elemen */
+        }
+
+        .card-body h3 {
+  font-size: 1.75rem; /* Ukuran font lebih besar */
+  font-weight: bold; /* Menjadikan font tebal */
+  margin-bottom: 1rem; /* Jarak bawah */
+  margin-top: 0.5rem; /* Jarak atas */
+}
+
+.card-body p {
+  margin-bottom: 1.5rem; /* Jarak bawah */
+  margin-top: 0.5rem; /* Jarak atas */
+  font-size: 1rem; /* Tetap dengan ukuran default */
+  line-height: 1.6; /* Memastikan teks lebih mudah dibaca */
+}
+
+
     </style>
 </head>
 
@@ -412,6 +435,45 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
       </div>
     </section>
+    <section class="container my-5">
+  <h2 class="section-title" data-aos="fade-up">Sertifikat Kami</h2>
+  <div class="row g-5">
+    <!-- Kartu Pertama -->
+    <div class="col-md-6">
+      <div class="card">
+        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+          <img src="./assets/img/Sertifikat 1.jpg" class="img-fluid img-reduced" />
+          <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Sertifikat Halal</h3>
+          <p class="card-text">RPA Ciomas Jogja dengan bangga menghadirkan produk unggulan yang telah memenuhi standar Sertifikat Halal dari lembaga resmi. Dengan proses pemotongan dan pengolahan yang diawasi secara ketat, kami memastikan setiap langkah produksi berjalan sesuai kaidah syariat Islam.</p>
+          <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Detail</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Kartu Kedua -->
+    <div class="col-md-6">
+      <div class="card">
+        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+          <img src="./assets/img/Sertifikat 4.jpg" class="img-fluid img-reduced" />
+          <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Sertifikat Nomor Kontrol Veteriner (NKV)</h3>
+          <p class="card-text">RPA Ciomas Jogja telah mendapatkan Sertifikat Nomor Kontrol Veteriner (NKV) sebagai bukti standar higienis dan keamanan pangan dalam pengolahan produk hewan. Sertifikasi ini diberikan oleh otoritas veteriner resmi, menjamin bahwa setiap proses—mulai dari pemotongan hingga distribusi—memenuhi kriteria ketat untuk kualitas dan kebersihan.</p>
+          <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Detail</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <section id="testimonials">
       <h2 class="section-title" data-aos="fade-up">Apa Kata Mereka?</h2>
