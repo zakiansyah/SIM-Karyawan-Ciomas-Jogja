@@ -110,41 +110,42 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <br>
                 </form>
                 <form action="mendaftar_aksi.php" method="post" enctype="multipart/form-data">
-                    <?php
-                      $sql_id = "SELECT * FROM pelamars
-                                  WHERE id_user='".$_SESSION['id_user']."'";
-                      $query_id = mysqli_query($koneksi, $sql_id);
-                      $data_id= mysqli_fetch_array($query_id,MYSQLI_BOTH);
-                    ?>
-                    <input type="hidden" name="txtidpelamar" value="<?php echo $data_id['id_pelamar']; ?>">
-                    <input type="hidden" name="txtidlowongan" value="<?php echo $data_cek['id_lowongan']; ?>">
-                    <input type="hidden" name="txttgllamar" value="<?php echo date('Y-m-d'); ?>">
-                    <div class="form-group row">
-                        <label for="inputPassword" class="col-sm-2 col-form-label" >CV</label>
-                        <div class="col-sm-4">
-                        <input type="file" name="cv" required>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputPassword" class="col-sm-2 col-form-label" >Surat Lamaran</label>
-                        <div class="col-sm-4">
-                        <input type="file" name="surat" required>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputPassword" class="col-sm-2 col-form-label" >SKCK</label>
-                        <div class="col-sm-4">
-                        <input type="file" name="skck" required>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="form-group row">
-                    <div class="col-md-3" >
-                        <a href="lowongan.php" class="btn btn-secondary btn-sm"><i class="fa fa-arrow-left"></i> kembali</a>
-                        <button type="submit" name="btnDAFTAR" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Daftar</button>
-                    </div>
-                    </div>
-                </form>
+    <?php
+    $sql_id = "SELECT * FROM pelamars WHERE id_user='" . $_SESSION['id_user'] . "'";
+    $query_id = mysqli_query($koneksi, $sql_id);
+    $data_id = mysqli_fetch_array($query_id, MYSQLI_BOTH);
+    ?>
+    <input type="hidden" name="txtidpelamar" value="<?php echo $data_id['id_pelamar']; ?>">
+    <input type="hidden" name="txtidlowongan" value="<?php echo $data_cek['id_lowongan']; ?>">
+    <input type="hidden" name="txttgllamar" value="<?php echo date('Y-m-d'); ?>">
+
+    <div class="form-group row">
+        <label for="cv" class="col-sm-2 col-form-label">CV (PDF)</label>
+        <div class="col-sm-4">
+            <input type="file" name="cv" accept=".pdf" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="surat" class="col-sm-2 col-form-label">Surat Lamaran (PDF)</label>
+        <div class="col-sm-4">
+            <input type="file" name="surat" accept=".pdf" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="skck" class="col-sm-2 col-form-label">SKCK (PDF)</label>
+        <div class="col-sm-4">
+            <input type="file" name="skck" accept=".pdf" required>
+        </div>
+    </div>
+    <br>
+    <div class="form-group row">
+        <div class="col-md-3">
+            <a href="lowongan.php" class="btn btn-secondary btn-sm"><i class="fa fa-arrow-left"></i> Kembali</a>
+            <button type="submit" name="btnDAFTAR" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Daftar</button>
+        </div>
+    </div>
+</form>
+
                 </div>
             </div>
             </div>

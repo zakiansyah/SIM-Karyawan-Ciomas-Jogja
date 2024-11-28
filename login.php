@@ -30,7 +30,7 @@
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="" class="h5"><b>Yuk Coding</b>Rekrutmen</a>
+      <a href="" class="h5"><b>PT. Ciomas Adisatwa</b>Rekrutmen</a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Log In</p>

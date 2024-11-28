@@ -12,6 +12,26 @@
         $query_cek = mysqli_query($koneksi, $sql_cek);
         $data_cek= mysqli_fetch_array($query_cek,MYSQLI_BOTH);
     }
+    
+// Get the job ID from the URL (passed via the 'kode' parameter)
+$id_lowongan = $_GET['kode'];
+
+// Get the user ID from session
+$id_pelamar = $_SESSION['id_user'];
+
+// Check if the user has already applied for this job
+$sql_check = "SELECT * FROM pelamars WHERE id_user = '$id_pelamar' AND id_lowongan = '$id_lowongan'";
+$query_check = mysqli_query($koneksi, $sql_check);
+
+if(mysqli_num_rows($query_check) > 0) {
+    // If the user has already applied, show a message or disable the register button
+    echo "<script>alert('You have already applied for this job.');</script>";
+} else {
+    // Show the registration form
+    // Display the form or allow the user to apply
+}
+
+
 ?>
 <!DOCTYPE html>
 <!--

@@ -374,27 +374,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </div>
     </section>
 
-    <div class="container text-center">
-  <div class="row">
-    <div class="col-6">
-      Column
-    </div>
-    <div class="col-6">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-  </div>
-</div>
-
     <section id="quality">
       <h2 class="section-title" data-aos="fade-up">Kualitas Adalah Prioritas Kami</h2>
       <div class="quality-content">
         <div data-aos="fade-right">
-          <h3>Standar Internasional</h3>
+          <h3>Sertifikat</h3>
           <ul>
-            <li>Sertifikasi ISO</li>
+            <li>Sertifikat NKV</li>
             <li>HACCP Certified</li>
           </ul>
         </div>
