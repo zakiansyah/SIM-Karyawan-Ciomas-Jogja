@@ -6,8 +6,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
   <link rel="icon" type="image/x-icon" href="https://kompaskerja.com/wp-content/uploads/2019/09/logo-japfa-630x380.jpg">
   <title>PT. Ciomas Adisatwa | Home</title>
+=======
+  <link rel="icon" type="image/x-icon" href="../assets/img/yc.png">
+  <title>PT. Ciomas Adisatwa | Admin</title>
+>>>>>>> 820dc73d9d7544b92c4515a7e1a741ee05e0dad0
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -74,7 +79,7 @@
         <a href="../index3.html" class="nav-link"></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link"><b>SISTEM INFORMASI REKRUTMEN YUK CODING <?php echo date('Y') ?></b></a>
+        <a href="#" class="nav-link"><b>SISTEM INFORMASI REKRUTMEN PT. CIOMAS ADISATWA <?php echo date('Y') ?></b></a>
       </li>
     </ul>
     
@@ -98,8 +103,8 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="../index3.html" class="brand-link">
-      <img src="../assets/img/yc.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Yuk Coding Rekrutmen</span>
+      <img src="../assets/img/logo ciomas.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">PT. Ciomas Adisatwa</span>
     </a>
 
     <!-- Sidebar -->
