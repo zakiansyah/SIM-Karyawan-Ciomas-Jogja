@@ -115,7 +115,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="col-md-3" >
                         <a href="lowongan.php" class="btn btn-secondary btn-sm"><i class="fa fa-arrow-left"></i> kembali</a>
                         <?php if (isset($_SESSION["Pelamar"])): ?>
-                        <a href="mendaftar.php?kode=<?php echo $data_cek['id_lowongan']; ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Daftar</a>
+                        <a href="https://forms.gle/Mfcnzqnnib8r6eNo9" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Daftar</a>
                         <?php else: ?>
                         <a href="login.php" class="btn btn-primary btn-sm"><i class="fa fa-sign-in-alt"></i> Login</a>
                         <?php endif ?>

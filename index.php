@@ -19,7 +19,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <title>PT. Ciomas Adisatwa | Home</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- DataTables -->
@@ -28,257 +29,327 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
   <style>
-        /* Reset & Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        body {
-            line-height: 1.6;
-            color: #333;
-        }
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
 
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 1rem 5%;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    /* Navigation */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 1rem 5%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #1a5f7a;
-        }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #1a5f7a;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
 
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            transition: color 0.3s;
-        }
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s;
+    }
 
-        .nav-links a:hover {
-            color: #1a5f7a;
-        }
+    .nav-links a:hover {
+      color: #1a5f7a;
+    }
 
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                        url('/api/placeholder/1920/1080') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 0 5%;
-        }
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('/api/placeholder/1920/1080') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 0 5%;
+    }
 
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
 
-        /* Sections */
-        section {
-            padding: 3rem 5%;
-        }
+    /* Sections */
+    section {
+      padding: 3rem 5%;
+    }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #1a5f7a;
-        }
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #1a5f7a;
+    }
 
-        /* About Section */
-        .timelinee {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
+    /* About Section */
+    .timelinee {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
 
-        .timelinee-item {
-            background: #f9f9f9;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        .certificate {
-            margin: 20px 0;
-            text-align: center;
-          }
-        .certificate-img {
-            width: 200px;
-            height: auto;
-            margin-bottom: 10px;
-          }
-        /* Products Section */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
+    .timelinee-item {
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
 
-        .product-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
+    .certificate {
+      margin: 20px 0;
+      text-align: center;
+    }
 
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
+    .certificate-img {
+      width: 200px;
+      height: auto;
+      margin-bottom: 10px;
+    }
 
-        .product-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+    /* Products Section */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
 
-        .product-info {
-            padding: 1.5rem;
-        }
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
 
-        /* Quality Section */
-        .quality-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
 
-        /* Testimonials Section */
-        .testimonials-slider {
-            display: flex;
-            overflow-x: hidden;
-            scroll-snap-type: x mandatory;
-        }
+    .product-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
 
-        .testimonial-card {
-            min-width: 100%;
-            scroll-snap-align: start;
-            padding: 2rem;
-            background: #f9f9f9;
-            border-radius: 10px;
-            margin-right: 1rem;
-        }
+    .product-info {
+      padding: 1.5rem;
+    }
 
-        /* CTA Buttons */
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: #1a5f7a;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
+    /* Quality Section */
+    .quality-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
 
-        .cta-button:hover {
-            background: #134b61;
-        }
+    /* Testimonials Section */
+    .testimonials-slider {
+      display: flex;
+      overflow-x: hidden;
+      scroll-snap-type: x mandatory;
+    }
 
-        /* Footer */
-        footer {
-            background: #1a5f7a;
-            color: white;
-            padding: 3rem 5%;
-        }
+    .testimonial-card {
+      min-width: 100%;
+      scroll-snap-align: start;
+      padding: 2rem;
+      background: #f9f9f9;
+      border-radius: 10px;
+      margin-right: 1rem;
+    }
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
+    /* CTA Buttons */
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: #1a5f7a;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
 
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
+    .cta-button:hover {
+      background: #134b61;
+    }
 
-        .social-icons a {
-            color: white;
-            font-size: 1.5rem;
-            transition: opacity 0.3s;
-        }
+    /* Footer */
+    footer {
+      background: #1a5f7a;
+      color: white;
+      padding: 3rem 5%;
+    }
 
-        .social-icons a:hover {
-            opacity: 0.8;
-        }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
 
-            .hero-content h1 {
-                font-size: 2rem;
-            }
+    .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      transition: opacity 0.3s;
+    }
 
-            .quality-content {
-                grid-template-columns: 1fr;
-            }
-        }
+    .social-icons a:hover {
+      opacity: 0.8;
+    }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    .product-card {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      width: 90%;
+      /* Konsisten lebar card */
+      max-width: 450px;
+      /* Batas ukuran maksimal */
+      height: 400px;
+      /* Tinggi tetap agar sejajar */
+      display: flex; 
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
 
-        .animate-fade-in {
-            animation: fadeIn 1s ease-out;
-        }
+    }
 
-        .img-reduced {
-          width: 50%; /* Mengurangi ukuran gambar menjadi 50% */
-          height: auto; /* Memastikan proporsi tetap terjaga */
-          display: block; /* Mengatur gambar sebagai elemen blok */
-          margin: 0 auto; /* Memusatkan gambar di dalam elemen */
-        }
+    .product-card img {
+      width: 100%;
+      max-width: 280px;
+      /* Ukuran maksimum gambar */
+      height: 350px;
+      /* Tinggi gambar konsisten */
+      object-fit: cover;
+      /* Pastikan gambar tidak terdistorsi */
+      margin-bottom: 10px;
+    }
 
-        .card-body h3 {
-  font-size: 1.75rem; /* Ukuran font lebih besar */
-  font-weight: bold; /* Menjadikan font tebal */
-  margin-bottom: 1rem; /* Jarak bawah */
-  margin-top: 0.5rem; /* Jarak atas */
-}
+    .product-card h3 {
+      font-size: 25px;
+    }
 
-.card-body p {
-  margin-bottom: 1.5rem; /* Jarak bawah */
-  margin-top: 0.5rem; /* Jarak atas */
-  font-size: 1rem; /* Tetap dengan ukuran default */
-  line-height: 1.6; /* Memastikan teks lebih mudah dibaca */
-}
+    .product-card p {
+      font-size: 14px;
+      color: #555;
+      text-align: center;
+    }
 
+    .owl-carousel .item {
+      display: flex;
+      justify-content: center;
+    }
 
-    </style>
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .quality-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+
+    .img-reduced {
+      width: 50%;
+      /* Mengurangi ukuran gambar menjadi 50% */
+      height: auto;
+      /* Memastikan proporsi tetap terjaga */
+      display: block;
+      /* Mengatur gambar sebagai elemen blok */
+      margin: 0 auto;
+      /* Memusatkan gambar di dalam elemen */
+    }
+
+    .card-body h3 {
+      font-size: 1.75rem;
+      /* Ukuran font lebih besar */
+      font-weight: bold;
+      /* Menjadikan font tebal */
+      margin-bottom: 1rem;
+      /* Jarak bawah */
+      margin-top: 0.5rem;
+      /* Jarak atas */
+    }
+
+    .card-body p {
+      margin-bottom: 1.5rem;
+      /* Jarak bawah */
+      margin-top: 0.5rem;
+      /* Jarak atas */
+      font-size: 1rem;
+      /* Tetap dengan ukuran default */
+      line-height: 1.6;
+      /* Memastikan teks lebih mudah dibaca */
+    }
+  </style>
 </head>
 
 <body class="hold-transition layout-top-nav">
@@ -301,7 +372,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <h1 class="m-0"> Home </h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
-              
+
             </div><!-- /.col -->
           </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -365,11 +436,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="timelinee">
         <div class="timelinee-item" data-aos="fade-right">
           <h3>Visi Kami</h3>
-          <p>Menjadi Perusahaan Interrated Poultry Processing terbesar di Indonesia, Serta menghasilkan protein hewani yang Halal, Aman, Utuh, Sehat, dan Berkualitas</p>
+          <p>Menjadi Perusahaan Interrated Poultry Processing terbesar di Indonesia, Serta menghasilkan protein hewani
+            yang Halal, Aman, Utuh, Sehat, dan Berkualitas</p>
         </div>
         <div class="timelinee-item" data-aos="fade-left">
-          <h3><ul>Misi Kami</ul></h3>
-          <li>Meningkatkan gizi masyarakat melalui penyediaan protein hewani asal daging ayam yang Halal, Aman, utuh, Sehat, dan Berkualitas</li>
+          <h3>
+            <ul>Misi Kami</ul>
+          </h3>
+          <li>Meningkatkan gizi masyarakat melalui penyediaan protein hewani asal daging ayam yang Halal, Aman, utuh,
+            Sehat, dan Berkualitas</li>
           <li>Memberikan kontribusi laba yang optimal kepada JAPFA Group</li>
           <li>Meningkatkan kesejahteraan karyawan, Mitra Usaha, dan Masyarakat Sekitar</li>
         </div>
@@ -377,50 +452,56 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </section>
 
     <section id="products">
-      <h2 class="section-title" data-aos="fade-up">Produk Berkualitas Kami</h2>
-      <div class="products-grid">
-        <div class="product-card" data-aos="fade-up">
-          <img src="./assets/img/Ayam Segar.jpg" alt="Ayam Segar" class="product-img">
-          <div class="product-info">
-            <h3>Ayam Segar</h3>
-            <p>Unggas segar dengan proses higienis yang terjamin.</p>
+      <h2 class="section-title text-center fw-bold pt-5 pb-3"data-aos="fade-up">Produk Berkualitas Kami</h2>
+      <div class="owl-carousel owl-theme"data-aos="fade-up">
+        <div class="item">
+          <div class="product-card text-center">
+            <img class="img-fluid mx-auto d-block" src="./assets/img/ayam_utuh.jpg" alt="Ayam Segar">
+            <h3 class="pt-2">Ayam Utuh</h3>
+            <p>Ayam Broiler karkas atau utuh yang telah dipisahkan dari kepala, ceker, dan jeroan.</p>
           </div>
         </div>
-        <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-          <img src="./assets/img/Olahan Ayam.png" alt="Olahan Ayam" class="product-img">
-          <div class="product-info">
-            <h3>Olahan Ayam</h3>
-            <p>Berbagai produk olahan seperti nugget dan sosis.</p>
+        <div class="item">
+          <div class="product-card text-center">
+            <img class="img-fluid mx-auto d-block" src="./assets/img/paha_atas.jpg" alt="Olahan Ayam">
+            <h3 class="pt-2">Paha Atas</h3>
+            <p>Potongan ayam dengan tulang dan kulit.</p>
           </div>
         </div>
-        <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-          <img src="./assets/img/Pakan Ayam.png" style="width: 400px; height: 200px; object-fit: cover;" alt="Pakan Ternak" class="product-img">
-          <div class="product-info">
-            <h3>Pakan Ternak</h3>
-            <p>Pakan berstandar tinggi untuk hasil terbaik.</p>
+        <div class="item">
+          <div class="product-card text-center">
+            <img class="img-fluid mx-auto d-block" src="./assets/img/sayap.jpg" alt="Pakan Ternak">
+            <h3 class="pt-2">Sayap</h3>
+            <p>Potongan sayap yang cocok untuk masakan rumah dan restoran.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="product-card text-center">
+            <img class="img-fluid mx-auto d-block" src="./assets/img/ayam_paha_bawah.jpg" alt="Paha Bawah">
+            <h3 class="pt-2">Paha Bawah</h3>
+            <p>Potongan paha bawah ayam dengan tulang dan kulit.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="product-card text-center">
+            <img class="img-fluid mx-auto d-block" src="./assets/img/dada_ayam_utuh.jpg" alt="Dada Ayam Utuh">
+            <h3 class="pt-2">Dada Ayam Utuh</h3>
+            <p>Potongan dada ayam dengan tulang dan kulit.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="product-card text-center">
+            <img class="img-fluid mx-auto d-block" src="./assets/img/ayam_parting_mix.jpg" alt="Ayam Parting Mix">
+            <h3 class="pt-2">Ayam Parting Mix</h3>
+            <p>Partingan Ayam / Potongan ayam campur terdiri dari paha, sayap, dada, random, tidak bisa pilih.</p>
           </div>
         </div>
       </div>
     </section>
-    <div class="container text-center">
-</div>
 
-    <section id="certificate">
-      <h2 class="section-title" data-aos="fade-up">Kualitas Adalah Prioritas Kami</h2>
-      <div class="certificate">
-        <div data-aos="fade-right">
-          <h3>Standar Internasional</h3>
-          <ul>
-            <li>Sertifikasi ISO</li>
-            <li>HACCP Certified</li>
-          </ul>
-        </div>
-        <div data-aos="fade-left">
-          <img src="./assets/img/Proses Produksi.jpg
-          " alt="Proses Produksi" style="width: 100%; border-radius: 10px;">
-        </div>
-      </div>
-    </section>
+    <div class="container text-center">
+    </div>
+
 
     <section id="sustainability">
       <h2 class="section-title" data-aos="fade-up">Bergerak untuk Masa Depan yang Berkelanjutan</h2>
@@ -436,48 +517,63 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </div>
     </section>
     <section class="container my-5">
-  <h2 class="section-title" data-aos="fade-up">Sertifikat Kami</h2>
-  <div class="row g-5">
-    <!-- Kartu Pertama -->
-    <div class="col-md-6">
-      <div class="card">
-        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-          <img src="./assets/img/Sertifikat 1.jpg" class="img-fluid img-reduced" />
-          <a href="#!">
-            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-          </a>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">Sertifikat Halal</h3>
-          <p class="card-text">RPA Ciomas Jogja dengan bangga menghadirkan produk unggulan yang telah memenuhi standar Sertifikat Halal dari lembaga resmi. Dengan proses pemotongan dan pengolahan yang diawasi secara ketat, kami memastikan setiap langkah produksi berjalan sesuai kaidah syariat Islam.</p>
-          <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Detail</a>
+      <h2 class="section-title text-center" data-aos="fade-up">Sertifikat Kami</h2>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <!-- Kartu Pertama -->
+          <div class="col" data-aos="fade-up">
+            <div class="card h-100">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-init data-mdb-ripple-color="light">
+                <img src="./assets/img/Sertifikat 1.jpg" class="img-fluid img-reduced" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body d-flex flex-column" data-aos="fade-up">
+                <h3 class="card-title">Sertifikat Halal</h3>
+                <p class="card-text">
+                  RPA Ciomas Jogja dengan bangga menghadirkan produk unggulan yang telah memenuhi standar Sertifikat
+                  Halal dari lembaga resmi. Dengan proses pemotongan dan pengolahan yang diawasi secara ketat, kami
+                  memastikan setiap langkah produksi berjalan sesuai kaidah syariat Islam.
+                </p>
+                <div class="mt-auto">
+                  <a href="https://drive.google.com/file/d/1HNW7I5G-N3OHhJPo6F9KkmV8xIczMJ21/view?usp=sharing"
+                    class="btn btn-primary" data-mdb-ripple-init>Detail</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Kartu Kedua -->
+          <div class="col" data-aos="fade-up">
+            <div class="card h-100">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-init data-mdb-ripple-color="light">
+                <img src="./assets/img/Sertifikat 4.jpg" class="img-fluid img-reduced" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body d-flex flex-column" data-aos="fade-up">
+                <h3 class="card-title">Sertifikat Nomor Kontrol Veteriner (NKV)</h3>
+                <p class="card-text">
+                  RPA Ciomas Jogja telah mendapatkan Sertifikat Nomor Kontrol Veteriner (NKV) sebagai bukti standar
+                  higienis dan keamanan pangan dalam pengolahan produk hewan. Sertifikasi ini diberikan oleh otoritas
+                  veteriner resmi, menjamin bahwa setiap proses—mulai dari pemotongan hingga distribusi—memenuhi
+                  kriteria ketat untuk kualitas dan kebersihan.
+                </p>
+                <div class="mt-auto">
+                  <a href="https://drive.google.com/file/d/1SQi1Ft3J_aHS9UNEJbZK5u_H3wxlY_WK/view?usp=sharing"
+                    class="btn btn-primary" data-mdb-ripple-init>Detail</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    
-    <!-- Kartu Kedua -->
-    <div class="col-md-6">
-      <div class="card">
-        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-          <img src="./assets/img/Sertifikat 4.jpg" class="img-fluid img-reduced" />
-          <a href="#!">
-            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-          </a>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">Sertifikat Nomor Kontrol Veteriner (NKV)</h3>
-          <p class="card-text">RPA Ciomas Jogja telah mendapatkan Sertifikat Nomor Kontrol Veteriner (NKV) sebagai bukti standar higienis dan keamanan pangan dalam pengolahan produk hewan. Sertifikasi ini diberikan oleh otoritas veteriner resmi, menjamin bahwa setiap proses—mulai dari pemotongan hingga distribusi—memenuhi kriteria ketat untuk kualitas dan kebersihan.</p>
-          <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Detail</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-
+    </section>
     <section id="testimonials">
       <h2 class="section-title" data-aos="fade-up">Apa Kata Mereka?</h2>
-      <div class="testimonials-slider" id="testimonialsSlider">
+      <div class="testimonials-slider" id="testimonialsSlider" data-aos="fade-up">
         <div class="testimonial-card">
           <p>"PT Ciomas Adisatwa selalu menjaga kualitas produk mereka. Sangat memuaskan!"</p>
           <strong>- Ahmad Suryanto, Distributor</strong>
@@ -573,6 +669,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
           }
         }
       }, 5000);
+  
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 3
+          }
+        }
+      });
+
+
     </script>
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
@@ -587,7 +702,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main Footer -->
     <footer class="main-footer">
       <!-- To the right -->
-      
+
       <!-- Default to the left -->
       <strong>Copyright &copy; 2024 <a href="https://adminlte.io">TIM MPTI</a>.</strong> All rights reserved.
     </footer>
@@ -618,7 +733,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
   <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
   <script>
-    $(function() {
+    $(function () {
       $("#example1").DataTable({
         "responsive": true,
         "lengthChange": false,
@@ -637,7 +752,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     });
   </script>
   <script>
-    $(function() {
+    $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     })
   </script>
