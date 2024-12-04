@@ -57,9 +57,9 @@
                     <td><?php echo $data['nama_lowongan']; ?></td>
                     <td><?php echo date('d F Y', strtotime($data['tgl_lamaran'])); ?></td>
                     <td>
-                        <?php
+                        <?php 
                             if($data['keputusan'] == '0'){ ?>                                                           
-                            <span class="badge badge-warning">Menunggu Proses</span>
+                            <span class="badge badge-warning">Menunggu Proses</span> 
                             <?php } else if($data['keputusan'] == 'Diterima'){ ?>
                             <span class="badge badge-success"><?php echo $data['keputusan']; ?></span>
                             <?php } else {?>
