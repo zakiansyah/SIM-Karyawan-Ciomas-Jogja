@@ -25,7 +25,7 @@ if (!empty($date1) && !empty($date2)) {
 	ON lamarans.id_pelamar=pelamars.id_pelamar
 	JOIN lowongans
 	ON lowongans.id_lowongan=lamarans.id_lowongan
-	WHERE lamarans.keputusan='Diterima'"); 
+	WHERE lamarans.keputusan='Diterima'");
 }
 
 ?>
@@ -33,8 +33,8 @@ if (!empty($date1) && !empty($date2)) {
 <html>
 
 <head>
-	<link rel="icon" type="image/x-icon" href="../assets/img/yc.png">
-	<title>SIRK - Cetak Laporan Lulus Administrasi</title>
+	<link rel="icon" type="image/x-icon" href="../assets/img/logo ciomas.jpg">
+	<title>HRD - Cetak Laporan Pelamar</title>
 	<style type="text/css">
 		table {
 			border-style: double;
@@ -73,12 +73,14 @@ if (!empty($date1) && !empty($date2)) {
 	<center>
 		<table>
 			<tr>
-				<td><img src="../assets/img/yc.png" width="90" height="90"></td>
+				<td><img src="https://kompaskerja.com/wp-content/uploads/2019/09/logo-japfa-630x380.jpg" width="90"
+						height="90"></td>
 				<td>
 					<center>
-						<font size="5">CV. YUK CODING MEDIA</font><br>
-						<font size="2">Alamat : Jl. Panunggulan No. 17B, Ds. Gajahmati, Kec. Pati, Kab. Pati Kode Pos 59116</font><br>
-						<font size="2"><i>Phone/Fax : 081225764094 </i></font>
+						<font size="5">PT Ciomas Adisatwa Yogakarta</font><br>
+						<font size="2">Alamat : Madurejo, Kec. Prambanan, Kabupaten Sleman, Daerah Istimewa Yogyakarta
+						</font><br>
+						<font size="2"><i>Phone/Fax : 08XX-XXXX-XXXX </i></font>
 					</center>
 				</td>
 			</tr>
@@ -105,20 +107,20 @@ if (!empty($date1) && !empty($date2)) {
 			<?php
 			$no = 1; //nilai awal nomer
 			while ($data_cek = mysqli_fetch_array($query_tampil, MYSQLI_BOTH)) {
-			?>
+				?>
 				<tr>
 					<td id="t01"><?php echo $no; ?>.</td>
-					
+
 					<td id="t01"><?php echo $data_cek['nama']; ?></td>
 					<td id="t01">
-					<?php echo $data_cek['nama_lowongan']; ?>
+						<?php echo $data_cek['nama_lowongan']; ?>
 					</td>
-					
+
 					<?php $tanggal = $data_cek['tgl_lamaran']; ?>
 					<td id="t01"><?php echo tgl_indo(date($tanggal)); ?></td>
 					<td id="t01"><?php echo $data_cek['keputusan']; ?></td>
 				</tr>
-			<?php
+				<?php
 				//auto increment nomer
 				$no++;
 			}
@@ -130,7 +132,8 @@ if (!empty($date1) && !empty($date2)) {
 	<table width="700">
 		<tr><?php $tgl = date('Y-m-d'); ?>
 			<td width="350" class="text"><br><br><br><br><br><br><br><br></td>
-			<td width="370" class="text">Kudus, <?php echo tgl_indo(date($tgl)); ?><br>Kepala CV. Yuk Coding<br><br><br><br><br><br>Muhammad Nur Fawaiq S.Kom</td>
+			<td width="370" class="text">Yogyakarta, <?php echo tgl_indo(date($tgl)); ?><br>HRD PT Ciomas Adisatwa
+				Yogyakarta<br><br><br><br><br><br>Fergusto Orlando Cantona</td>
 		</tr>
 	</table>
 	<script>
@@ -144,7 +147,7 @@ if (!empty($date1) && !empty($date2)) {
 function tgl_indo($tanggal)
 {
 	$bulan = array(
-		1 =>   'Januari',
+		1 => 'Januari',
 		'Februari',
 		'Maret',
 		'April',
@@ -163,6 +166,6 @@ function tgl_indo($tanggal)
 	// variabel pecahkan 1 = bulan
 	// variabel pecahkan 2 = tahun
 
-	return $pecahkan[2] . ' ' . $bulan[(int)$pecahkan[1]] . ' ' . $pecahkan[0];
+	return $pecahkan[2] . ' ' . $bulan[(int) $pecahkan[1]] . ' ' . $pecahkan[0];
 }
 ?>

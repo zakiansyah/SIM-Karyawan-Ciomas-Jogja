@@ -55,12 +55,6 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-                    <div class="col-sm-4">
-                    <input type="text" class="form-control" id="inputPassword" value="<?php echo $data_cek['password']; ?>" readonly>
-                    </div>
-                </div>
-                <div class="form-group row">
                     <label for="inputPassword" class="col-sm-2 col-form-label">Tempat Tanggal Lahir</label>
                     <div class="col-sm-4">
                     <input type="text" class="form-control" id="inputPassword" value="<?php echo $data_cek['tempat_lhr']; ?>, <?php echo date('d F Y', strtotime($data_cek['tanggal_lhr'])); ?>" readonly>
@@ -91,12 +85,10 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Foto</label>
-                    <div class="col-sm-2">
-                    <?php
-                    echo '<img width="200" src="data:image/jpeg;base64,'.base64_encode( $result['foto'] ).'"/>';
-                    ?>
-                </div>
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Lowongan yang didaftar</label>
+                    <div class="col-sm-4">
+                    <input type="text" class="form-control" id="inputPassword" value="<?php echo $data_cek['nama_lowongan']; ?>" readonly>
+                    </div>
                 </div>
                 <br>
                 <div class="form-group row">

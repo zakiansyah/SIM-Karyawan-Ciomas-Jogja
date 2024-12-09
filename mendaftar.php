@@ -99,7 +99,7 @@ if (isset($_GET['kode'])) {
                                         <br>
                                         <div class="form-group row">
                                             <div class="col-md-3">
-                                                <a href="https://forms.gle/Mfcnzqnnib8r6eNo9" class="btn btn-secondary btn-sm"><i class="fa fa-arrow-left"></i> Kembali</a>
+                                                <a href="lowongan.php" class="btn btn-secondary btn-sm"><i class="fa fa-arrow-left"></i> Kembali</a>
                                                 <button type="submit" name="btnDAFTAR" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Daftar</button>
                                             </div>
                                         </div>

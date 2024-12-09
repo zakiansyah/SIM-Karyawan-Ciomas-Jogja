@@ -53,7 +53,7 @@ include '../koneksi.php';
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="../index3.html" class="nav-link">Home</a>
+          <a href="#" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
           <a href="#" class="nav-link">Contact</a>
@@ -74,7 +74,7 @@ include '../koneksi.php';
 
       <ul class="navbar-nav">
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="../index3.html" class="nav-link"></a>
+          <a href="#" class="nav-link"></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
           <a href="#" class="nav-link"><b>SISTEM INFORMASI REKRUTMEN PT CIOMAS ADISATWA YOGYAKARTA <?php echo date('Y') ?></b></a>
@@ -154,14 +154,6 @@ include '../koneksi.php';
               </a>
             </li>
             <li class="nav-item">
-              <a href="?halaman=penilaian" class="nav-link">
-                <i class="nav-icon fas fa-scroll"></i>
-                <p>
-                  Peniaian
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
               <a href="?halaman=pengumuman" class="nav-link">
                 <i class="nav-icon fas fa-bullhorn"></i>
                 <p>
@@ -183,22 +175,6 @@ include '../koneksi.php';
                 <i class="nav-icon fas fa-print"></i>
                 <p>
                   Laporan Lulus Administrasi
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="?halaman=laporan_tes" class="nav-link">
-                <i class="nav-icon fas fa-print"></i>
-                <p>
-                  Laporan Tes & Wawancara
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="?halaman=laporan_hasil" class="nav-link">
-                <i class="nav-icon fas fa-print"></i>
-                <p>
-                  Laporan Hasil Penerimaan
                 </p>
               </a>
             </li>

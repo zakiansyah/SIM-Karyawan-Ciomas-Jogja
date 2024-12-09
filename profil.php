@@ -160,20 +160,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     }
                                     ?>
                                     <table>
-                                    <tr>
+                                      <tr>
                                         <td width="200px">Nama</td>
                                         <td width="20px">:</td>
                                         <td><?php echo $data_profil['nama'] ?></td>
                                       </tr>
                                       <tr>
+                                      <tr>
                                         <td width="200px">Tempat Tanggal Lahir</td>
                                         <td width="20px">:</td>
-                                        <td><?php echo $data_profil['tempat_lhr'] ?>, <?php echo $data_profil['tanggal_lhr'] ?></td>
+                                        <td>
+                                          <?php
+                                          // Mengambil tempat lahir
+                                          $tempat_lahir = htmlspecialchars($data_profil['tempat_lhr']);
+
+                                          // Mengambil tanggal lahir dan mengubah formatnya
+                                          $tanggal_lahir = htmlspecialchars($data_profil['tanggal_lhr']);
+                                          $tanggal_format = date("d F Y", strtotime($tanggal_lahir)); // Format: 01 Desember 2002
+
+                                          // Menampilkan hasil
+                                          echo $tempat_lahir . ", " . $tanggal_format;
+                                          ?>
+                                        </td>
+                                      </tr>
                                       </tr>
                                       <tr>
                                         <td width="200px">Alamat</td>
                                         <td width="20px">:</td>
-                                        <td><?php echo $data_profil['desa'] ?>, <?php echo $data_profil['kecamatan'] ?>, <?php echo $data_profil['kabupaten'] ?>, <?php echo $data_profil['provinsi'] ?></td>
+                                        <td><?php echo $data_profil['desa'] ?>, <?php echo $data_profil['kecamatan'] ?>, <?php echo $data_profil['tempat_lhr'] ?>, <?php echo $data_profil['provinsi'] ?></td>
                                       </tr>
                                       <tr>
                                         <td width="200px">Kelamin</td>
@@ -464,62 +478,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                   </div>
                                 </div>
 
-                                <!-- Barisan ketujuh: Upload File -->
-                                <div class="form-group">
-                                  <label for="exampleInputFile">File input</label>
-                                  <div class="input-group">
-                                    <div class="custom-file">
-                                      <input type="file" class="custom-file-input" name="txtfile" id="exampleInputFile">
-                                      <label class="custom-file-label" for="exampleInputFile">Pilih Foto</label>
-                                    </div>
-                                    <div class="input-group-append">
-                                      <span class="input-group-text">Upload</span>
-                                    </div>
-                                  </div>
-                                </div>
-
                                 <!-- Tombol Submit -->
                                 <button type="submit" name="btnSimpan" class="btn btn-primary">Submit</button>
                               </div>
                               <!-- /.card-body -->
                           </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         </div>
                       <?php endif ?>
                       <!-- /.card -->
