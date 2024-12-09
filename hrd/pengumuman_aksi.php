@@ -1,7 +1,7 @@
 <?php
     if (isset ($_POST['btnSIMPAN'])){
         //mulai proses simpan
-        $sql_simpan = "INSERT INTO pengumumans (judul,deskripsi,tgl_post) VALUES (
+        $sql_simpan = "INSERT INTO pengumumans (judul, deskripsi, tgl_post) VALUES (
             '".$_POST['txtjudul']."',
             '".$_POST['txtdeskripsi']."',
             '".$_POST['txtpost']."')";
@@ -14,7 +14,7 @@
             echo "<script>alert('Simpan Gagal')</script>";
             echo "<meta http-equiv='refresh' content='0; url=index.php?halaman=pengumuman'>";
         } //proses simpan selesai
-    }else if (isset ($_POST['btnUBAH'])){
+    } else if (isset ($_POST['btnUBAH'])){
         //mulai proses ubah
         $sql_ubah = "UPDATE lowongans SET
             nama_lowongan='".$_POST['txtnama']."',
@@ -31,17 +31,17 @@
             echo "<script>alert('Ubah Gagal')</script>";
             echo "<meta http-equiv='refresh' content='0; url=index.php?halaman=lowongan'>";
         } //proses ubah selesai
-    }else if (isset ($_GET['kode'])){
-        //mulai proses hapus
-        $sql_hapus = "DELETE FROM lowongans WHERE
-            id_lowongan='".$_GET['kode']."'";
+    } else if (isset ($_GET['kode'])){
+        //mulai proses hapus pengumuman
+        $sql_hapus = "DELETE FROM pengumumans WHERE id_pengumuman='".$_GET['kode']."'";
         $query_hapus = mysqli_query($koneksi, $sql_hapus);
 
         if($query_hapus){
             echo "<script>alert('Hapus Berhasil')</script>";
-            echo "<meta http-equiv='refresh' content='0; url=index.php?halaman=lowongan'>";
+            echo "<meta http-equiv='refresh' content='0; url=index.php?halaman=pengumuman'>";
         }else{
             echo "<script>alert('Hapus Gagal')</script>";
-            echo "<meta http-equiv='refresh' content='0; url=index.php?halaman=lowongan'>";
+            echo "<meta http-equiv='refresh' content='0; url=index.php?halaman=pengumuman'>";
         } //proses hapus selesai
     }
+?>
