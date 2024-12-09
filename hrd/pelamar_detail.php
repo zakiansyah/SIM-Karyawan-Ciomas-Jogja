@@ -55,6 +55,12 @@
                     </div>
                 </div>
                 <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-4">
+                    <input type="text" class="form-control" id="inputPassword" value="<?php echo $data_cek['password']; ?>" readonly>
+                    </div>
+                </div>
+                <div class="form-group row">
                     <label for="inputPassword" class="col-sm-2 col-form-label">Tempat Tanggal Lahir</label>
                     <div class="col-sm-4">
                     <input type="text" class="form-control" id="inputPassword" value="<?php echo $data_cek['tempat_lhr']; ?>, <?php echo date('d F Y', strtotime($data_cek['tanggal_lhr'])); ?>" readonly>
@@ -85,10 +91,19 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Lowongan yang didaftar</label>
-                    <div class="col-sm-4">
-                    <input type="text" class="form-control" id="inputPassword" value="<?php echo $data_cek['nama_lowongan']; ?>" readonly>
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Cek Lamaran</label>
+                    <div class="col-sm-6">
+                    <a href="https://docs.google.com/spreadsheets/d/10-RnaMNjr0HBHsia5gunjTEz57gCgkImifGcIMOikdU/edit?usp=sharing" class="btn btn-primary btn-sm"></> Cek</a>
                     </div>
+                </div>
+                <!-- <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Foto</label>
+                    <div class="col-sm-2">
+                    <?php
+                    echo '<img width="200" src="data:image/jpeg;base64,'.base64_encode( $result['foto'] ).'"/>';
+                    ?>
+                </div> -->
+                
                 </div>
                 <br>
                 <div class="form-group row">
