@@ -145,21 +145,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
                               <div class="card-body">
                                 <div class="tab-content">
                                   <div class="active tab-pane" id="profil">
-                                  <?php
-$sql_tampil_profil = "SELECT users.*, pelamars.*
+                                    <?php
+                                    $sql_tampil_profil = "SELECT users.*, pelamars.*
                       FROM users
                       JOIN pelamars ON pelamars.id_user = users.id_user
                       WHERE users.id_user = '$_SESSION[id_user]'";
-$query_tampil_profil = mysqli_query($koneksi, $sql_tampil_profil);
-$data_profil = mysqli_fetch_array($query_tampil_profil, MYSQLI_BOTH);
+                                    $query_tampil_profil = mysqli_query($koneksi, $sql_tampil_profil);
+                                    $data_profil = mysqli_fetch_array($query_tampil_profil, MYSQLI_BOTH);
 
-// Tambahkan pengecekan apakah data ditemukan
-if (!$data_profil) {
-    echo "Data profil tidak ditemukan.";
-    exit;
-}
-?>
+                                    // Tambahkan pengecekan apakah data ditemukan
+                                    if (!$data_profil) {
+                                      echo "Data profil tidak ditemukan.";
+                                      exit;
+                                    }
+                                    ?>
                                     <table>
+                                    <tr>
+                                        <td width="200px">Nama</td>
+                                        <td width="20px">:</td>
+                                        <td><?php echo $data_profil['nama'] ?></td>
+                                      </tr>
                                       <tr>
                                         <td width="200px">Tempat Tanggal Lahir</td>
                                         <td width="20px">:</td>
@@ -168,7 +173,7 @@ if (!$data_profil) {
                                       <tr>
                                         <td width="200px">Alamat</td>
                                         <td width="20px">:</td>
-                                        <td><?php echo $data_profil['alamat'] ?>, <?php echo $data_profil['desa'] ?>, <?php echo $data_profil['kecamatan'] ?>, <?php echo $data_profil['kabupaten'] ?></td>
+                                        <td><?php echo $data_profil['desa'] ?>, <?php echo $data_profil['kecamatan'] ?>, <?php echo $data_profil['kabupaten'] ?>, <?php echo $data_profil['provinsi'] ?></td>
                                       </tr>
                                       <tr>
                                         <td width="200px">Kelamin</td>
@@ -210,7 +215,7 @@ if (!$data_profil) {
                                       $query_tampil_profil = mysqli_query($koneksi, $sql_tampil_profil);
                                       $data_profil = mysqli_fetch_array($query_tampil_profil, MYSQLI_BOTH);
                                       ?>
-                                      
+
                                       <div class="row">
                                         <div class="col-md-6">
                                           <div class="form-group">
@@ -226,197 +231,75 @@ if (!$data_profil) {
                                         </div>
                                       </div>
                                       <div class="row">
+                                        <div class="col-md-3">
+                                          <div class="form-group">
+                                            <label for="exampleInputPassword1">Provinsi</label>
+                                            <select class="custom-select form-control" name="nama_provinsi" required>
+                                          </div>
+                                        </div>
+                                      </div>
                                       <div class="col-md-3">
-                                      <div class="form-group">
-                                        <label for="exampleInputPassword1">Provinsi</label>
-                                        <select class="custom-select form-control" name="nama_provinsi" required>
-                                       </div>
-                                     </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                          <div class="form-group">
-                                            <label for="exampleInputPassword1">Kabupaten/Kota</label>
-                                            <select class="custom-select form-control" name="nama_kabupaten" required>
-                                            </select>
-                                          </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                          <div class="form-group">
-                                            <label for="exampleInputPassword1">Kecamatan</label>
-                                            <select class="custom-select form-control" name="nama_kecamatan" required>
-                                            </select>
-                                          </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                          <div class="form-group">
-                                            <label for="exampleInputPassword1">Desa</label>
-                                            <select class="custom-select form-control" name="nama_desa" required>
-                                            </select>
-                                          </div>
+                                        <div class="form-group">
+                                          <label for="exampleInputPassword1">Kabupaten/Kota</label>
+                                          <select class="custom-select form-control" name="nama_kabupaten" required>
+                                          </select>
                                         </div>
                                       </div>
-                                      <div class="form-group">
-                                        <label for="exampleInputPassword1">Alamat</label>
-                                        <textarea class="form-control" name="txtalamat" placeholder="Masukkan Alamat (Jalan, nomor rumah, keterangan)"><?php echo $data_profil['alamat'] ?></textarea>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-md-6">
-                                          <div class="form-group">
-                                            <label for="exampleSelectBorder">Kelamin</label>
-                                            <select class="custom-select form-control" name="txtkelamin" id="exampleSelectBorder">
-                                              <option <?php if ($data_profil['kelamin'] == 'Pria') {
-                                                        echo "selected";
-                                                      } ?> value='Pria'>Pria</option>
-                                              <option <?php if ($data_profil['kelamin'] == 'Wanita') {
-                                                        echo "selected";
-                                                      } ?> value='Wanita'>Wanita</option>
-                                            </select>
-                                          </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                          <div class="form-group">
-                                            <label for="exampleSelectBorder">Agama</label>
-                                            <select class="custom-select form-control" name="txtagama" id="exampleSelectBorder">
-                                              <option <?php if ($data_profil['agama'] == 'Islam') {
-                                                        echo "selected";
-                                                      } ?> value='Islam'>Islam</option>
-                                              <option <?php if ($data_profil['agama'] == 'Kristen') {
-                                                        echo "selected";
-                                                      } ?> value='Kristen'>Kristen</option>
-                                              <option <?php if ($data_profil['agama'] == 'Katolik') {
-                                                        echo "selected";
-                                                      } ?> value='Katolik'>Katolik</option>
-                                              <option <?php if ($data_profil['agama'] == 'Hindu') {
-                                                        echo "selected";
-                                                      } ?> value='Hindu'>Hindu</option>
-                                              <option <?php if ($data_profil['agama'] == 'Budha') {
-                                                        echo "selected";
-                                                      } ?> value='Budha'>Budha</option>
-                                              <option <?php if ($data_profil['agama'] == 'Konghuchu') {
-                                                        echo "selected";
-                                                      } ?> value='Konghuchu'>Konghuchu</option>
-                                            </select>
-                                          </div>
+                                      <div class="col-md-3">
+                                        <div class="form-group">
+                                          <label for="exampleInputPassword1">Kecamatan</label>
+                                          <select class="custom-select form-control" name="nama_kecamatan" required>
+                                          </select>
                                         </div>
                                       </div>
-                                      <div class="row">
-                                        <div class="col-md-6">
-                                          <div class="form-group">
-                                            <label for="exampleSelectBorder">Status</label>
-                                            <select class="custom-select form-control" name="txtstatus" id="exampleSelectBorder">
-                                              <option <?php if ($data_profil['status'] == 'Belum Kawin') {
-                                                        echo "selected";
-                                                      } ?> value='Belum Kawin'>Belum Kawin</option>
-                                              <option <?php if ($data_profil['status'] == 'Kawin') {
-                                                        echo "selected";
-                                                      } ?> value='Kawin'>Kawin</option>
-                                              <option <?php if ($data_profil['status'] == 'Cerai Hidup') {
-                                                        echo "selected";
-                                                      } ?> value='Cerai Hidup'>Cerai Hidup</option>
-                                              <option <?php if ($data_profil['status'] == 'Cerai Mati') {
-                                                        echo "selected";
-                                                      } ?> value='Cerai Mati'>Cerai Mati</option>
-                                            </select>
-                                          </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                          <div class="form-group">
-                                            <label for="exampleInputPassword1">Nomor HP</label>
-                                            <input type="tel" class="form-control" name="txthp" id="exampleInputPassword1" value="<?php echo $data_profil['no_hp'] ?>">
-                                          </div>
+                                      <div class="col-md-3">
+                                        <div class="form-group">
+                                          <label for="exampleInputPassword1">Desa</label>
+                                          <select class="custom-select form-control" name="nama_desa" required>
+                                          </select>
                                         </div>
                                       </div>
-                                      <input type="hidden" name="txtid" value="<?php echo $data_profil['id_pelamar']; ?>">
-                                      <button type="submit" name="btnUbah" class="btn btn-warning">Ubah</button>
-                                      <!-- /.card-body -->
-                                    </form>
-                                    <!-- /.post -->
-                                  </div>
-                                </div>
-                                <!-- /.tab-content -->
-                              </div><!-- /.card-body -->
-                            </div>
-                          <?php else : ?>
-                            <div class="card">
-                              <div class="card-header p-2">
-                                <ul class="nav nav-pills">
-                                  <li class="nav-item"><a class="nav-link active" href="#profil" data-toggle="tab">Buat Profil</a></li>
-                                </ul>
-                              </div><!-- /.card-header -->
-                              <form action="profil_aksi.php" method="POST">
-                                <div class="card-body">
-                                  <input type="hidden" name="txtiduser" value="<?php echo $_SESSION['id_user'] ?>">
-                                  <div class="row">
-                                    <div class="col-md-6">
-                                      <div class="form-group">
-                                        <label for="exampleInputEmail1">Tempat Lahir</label>
-                                        <input type="text" name="txttempat" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Tempat Lahir" required>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                      <div class="form-group">
-                                        <label for="exampleInputPassword1">Tanggal Lahir</label>
-                                        <input type="date" name="txttanggal" class="form-control" id="exampleInputPassword1" placeholder="Masukkan Tanggal Lahir" required>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-md-3">
-                                      <div class="form-group">
-                                        <label for="exampleInputPassword1">Provinsi</label>
-                                        <select class="custom-select form-control" name="nama_provinsi" required>
-                                        </select>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                      <div class="form-group">
-                                        <label for="exampleInputPassword1">Kabupaten/Kota</label>
-                                        <select class="custom-select form-control" name="nama_kabupaten" required>
-                                        </select>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                      <div class="form-group">
-                                        <label for="exampleInputPassword1">Kecamatan</label>
-                                        <select class="custom-select form-control" name="nama_kecamatan" required>
-                                        </select>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                      <div class="form-group">
-                                        <label for="exampleInputPassword1">Desa</label>
-                                        <select class="custom-select form-control" name="nama_desa" required>
-                                        </select>
-                                      </div>
-                                    </div>
                                   </div>
                                   <div class="form-group">
                                     <label for="exampleInputPassword1">Alamat</label>
-                                    <textarea class="form-control" name="txtalamat" placeholder="Masukkan Alamat (Jalan, nomor rumah, keterangan)" required></textarea>
+                                    <textarea class="form-control" name="txtalamat" placeholder="Masukkan Alamat (Jalan, nomor rumah, keterangan)"><?php echo $data_profil['alamat'] ?></textarea>
                                   </div>
                                   <div class="row">
                                     <div class="col-md-6">
                                       <div class="form-group">
                                         <label for="exampleSelectBorder">Kelamin</label>
-                                        <select class="custom-select form-control" name="txtkelamin" id="exampleSelectBorder" required>
-                                          <option value="" selected disabled>Pilih Kelamin</option>
-                                          <option>Pria</option>
-                                          <option>Wanita</option>
+                                        <select class="custom-select form-control" name="txtkelamin" id="exampleSelectBorder">
+                                          <option <?php if ($data_profil['kelamin'] == 'Pria') {
+                                                    echo "selected";
+                                                  } ?> value='Pria'>Pria</option>
+                                          <option <?php if ($data_profil['kelamin'] == 'Wanita') {
+                                                    echo "selected";
+                                                  } ?> value='Wanita'>Wanita</option>
                                         </select>
                                       </div>
                                     </div>
                                     <div class="col-md-6">
                                       <div class="form-group">
                                         <label for="exampleSelectBorder">Agama</label>
-                                        <select class="form-control select2" style="width: 100%;" name="txtagama" id="exampleSelectBorder" required>
-                                          <option value="" selected disabled>Pilih Agama</option>
-                                          <option>Islam</option>
-                                          <option>Kristen</option>
-                                          <option>Katolik</option>
-                                          <option>Hindu</option>
-                                          <option>Budha</option>
-                                          <option>Konghucu</option>
-                                          <option>Yahudi</option>
+                                        <select class="custom-select form-control" name="txtagama" id="exampleSelectBorder">
+                                          <option <?php if ($data_profil['agama'] == 'Islam') {
+                                                    echo "selected";
+                                                  } ?> value='Islam'>Islam</option>
+                                          <option <?php if ($data_profil['agama'] == 'Kristen') {
+                                                    echo "selected";
+                                                  } ?> value='Kristen'>Kristen</option>
+                                          <option <?php if ($data_profil['agama'] == 'Katolik') {
+                                                    echo "selected";
+                                                  } ?> value='Katolik'>Katolik</option>
+                                          <option <?php if ($data_profil['agama'] == 'Hindu') {
+                                                    echo "selected";
+                                                  } ?> value='Hindu'>Hindu</option>
+                                          <option <?php if ($data_profil['agama'] == 'Budha') {
+                                                    echo "selected";
+                                                  } ?> value='Budha'>Budha</option>
+                                          <option <?php if ($data_profil['agama'] == 'Konghuchu') {
+                                                    echo "selected";
+                                                  } ?> value='Konghuchu'>Konghuchu</option>
                                         </select>
                                       </div>
                                     </div>
@@ -425,81 +308,261 @@ if (!$data_profil) {
                                     <div class="col-md-6">
                                       <div class="form-group">
                                         <label for="exampleSelectBorder">Status</label>
-                                        <select class="custom-select form-control" name="txtstatus" id="exampleSelectBorder" required>
-                                          <option value="" selected disabled>Pilih Status</option>
-                                          <option>Belum Kawin</option>
-                                          <option>Kawin</option>
-                                          <option>Cerai Hidup</option>
-                                          <option>Cerai Mati</option>
+                                        <select class="custom-select form-control" name="txtstatus" id="exampleSelectBorder">
+                                          <option <?php if ($data_profil['status'] == 'Belum Kawin') {
+                                                    echo "selected";
+                                                  } ?> value='Belum Kawin'>Belum Kawin</option>
+                                          <option <?php if ($data_profil['status'] == 'Kawin') {
+                                                    echo "selected";
+                                                  } ?> value='Kawin'>Kawin</option>
+                                          <option <?php if ($data_profil['status'] == 'Cerai Hidup') {
+                                                    echo "selected";
+                                                  } ?> value='Cerai Hidup'>Cerai Hidup</option>
+                                          <option <?php if ($data_profil['status'] == 'Cerai Mati') {
+                                                    echo "selected";
+                                                  } ?> value='Cerai Mati'>Cerai Mati</option>
                                         </select>
                                       </div>
                                     </div>
                                     <div class="col-md-6">
                                       <div class="form-group">
                                         <label for="exampleInputPassword1">Nomor HP</label>
-                                        <input type="tel" class="form-control" name="txthp" id="exampleInputPassword1" placeholder="Masukkan Nomor HP" required>
+                                        <input type="tel" class="form-control" name="txthp" id="exampleInputPassword1" value="<?php echo $data_profil['no_hp'] ?>">
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="form-group">
-                                    <label for="exampleInputFile">File input</label>
-                                    <div class="input-group">
-                                      <div class="custom-file">
-                                        <input type="file" class="custom-file-input" name="txtfile" id="exampleInputFile">
-                                        <label class="custom-file-label" for="exampleInputFile">Pilih Foto</label>
-                                      </div>
-                                      <div class="input-group-append">
-                                        <span class="input-group-text">Upload</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <button type="submit" name="btnSimpan" class="btn btn-primary">Submit</button>
+                                  <input type="hidden" name="txtid" value="<?php echo $data_profil['id_pelamar']; ?>">
+                                  <button type="submit" name="btnUbah" class="btn btn-warning">Ubah</button>
+                                  <!-- /.card-body -->
+                                  </form>
+                                  <!-- /.post -->
                                 </div>
-                                <!-- /.card-body -->
-                              </form>
-                            </div>
-                          <?php endif ?>
-                          <!-- /.card -->
+                              </div>
+                              <!-- /.tab-content -->
+                            </div><!-- /.card-body -->
                         </div>
-                        <!-- /.col -->
+                      <?php else : ?>
+                        <div class="card">
+                          <div class="card-header p-2">
+                            <ul class="nav nav-pills">
+                              <li class="nav-item"><a class="nav-link active" href="#profil" data-toggle="tab">Buat Profil</a></li>
+                            </ul>
+                          </div><!-- /.card-header -->
+                          <form action="profil_aksi.php" method="POST">
+                            <div class="card-body">
+                              <input type="hidden" name="txtiduser" value="<?php echo $_SESSION['id_user'] ?>">
+
+                              <!-- Barisan pertama: Nama -->
+                              <div class="form-group">
+                                <label for="exampleInputNama1">Nama</label>
+                                <input type="text" name="txtnama" class="form-control" id="exampleInputNama1" placeholder="Masukkan Nama Anda" required>
+                              </div>
+
+                              <!-- Barisan kedua: Tempat Lahir dan Tanggal Lahir -->
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="exampleInputEmail1">Tempat Lahir</label>
+                                    <input type="text" name="txttempat" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Tempat Lahir" required>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="exampleInputPassword1">Tanggal Lahir</label>
+                                    <input type="date" name="txttanggal" class="form-control" id="exampleInputPassword1" placeholder="Masukkan Tanggal Lahir" required>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Barisan ketiga: Provinsi, Kabupaten/Kota, Kecamatan, Desa -->
+                              <div class="row">
+                                <div class="col-md-3">
+                                  <div class="form-group">
+                                    <label for="exampleInputPassword1">Provinsi</label>
+                                    <select class="custom-select form-control" name="nama_provinsi" required>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="form-group">
+                                    <label for="exampleInputPassword1">Kabupaten/Kota</label>
+                                    <select class="custom-select form-control" name="nama_kabupaten" required>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="form-group">
+                                    <label for="exampleInputPassword1">Kecamatan</label>
+                                    <select class="custom-select form-control" name="nama_kecamatan" required>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="form-group">
+                                    <label for="exampleInputPassword1">Desa</label>
+                                    <select class="custom-select form-control" name="nama_desa" required>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Barisan keempat: Alamat -->
+                              <div class="form-group">
+                                <label for="exampleInputPassword1">Alamat</label>
+                                <textarea class="form-control" name="txtalamat" placeholder="Masukkan Alamat (Jalan, nomor rumah, keterangan)" required></textarea>
+                              </div>
+
+                              <!-- Barisan kelima: Kelamin dan Agama -->
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="exampleSelectBorder">Kelamin</label>
+                                    <select class="custom-select form-control" name="txtkelamin" id="exampleSelectBorder" required>
+                                      <option value="" selected disabled>Pilih Kelamin</option>
+                                      <option>Pria</option>
+                                      <option>Wanita</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="exampleSelectBorder">Agama</label>
+                                    <select class="form-control select2" style="width: 100%;" name="txtagama" id="exampleSelectBorder" required>
+                                      <option value="" selected disabled>Pilih Agama</option>
+                                      <option>Islam</option>
+                                      <option>Kristen</option>
+                                      <option>Katolik</option>
+                                      <option>Hindu</option>
+                                      <option>Budha</option>
+                                      <option>Konghucu</option>
+                                      <option>Yahudi</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Barisan keenam: Status dan Nomor HP -->
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <div class="form-group">
+                                      <label for="exampleSelectBorder">Status</label>
+                                      <select class="custom-select form-control" name="txtstatus" id="exampleSelectBorder" required>
+                                        <option value="" selected disabled>Pilih Status</option>
+                                        <option>Belum Kawin</option>
+                                        <option>Kawin</option>
+                                        <option>Cerai Hidup</option>
+                                        <option>Cerai Mati</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label for="exampleInputPassword1">Nomor HP</label>
+                                      <input type="tel" class="form-control" name="txthp" id="exampleInputPassword1" placeholder="Masukkan Nomor HP" required>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Barisan ketujuh: Upload File -->
+                                <div class="form-group">
+                                  <label for="exampleInputFile">File input</label>
+                                  <div class="input-group">
+                                    <div class="custom-file">
+                                      <input type="file" class="custom-file-input" name="txtfile" id="exampleInputFile">
+                                      <label class="custom-file-label" for="exampleInputFile">Pilih Foto</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                      <span class="input-group-text">Upload</span>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Tombol Submit -->
+                                <button type="submit" name="btnSimpan" class="btn btn-primary">Submit</button>
+                              </div>
+                              <!-- /.card-body -->
+                          </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                      <?php endif ?>
+                      <!-- /.card -->
                       </div>
-                      <!-- /.row -->
-                    </div><!-- /.container-fluid -->
-                  </section>
-                  <!-- /.container-fluid -->
-                </div>
+                      <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div><!-- /.container-fluid -->
+                </section>
+                <!-- /.container-fluid -->
               </div>
             </div>
-            <!-- /.col-md-6 -->
           </div>
-          <!-- /.row -->
-        </div><!-- /.container-fluid -->
-      </div>
-      <!-- /.content -->
-
-
-      <!--  -->
-      <!--  -->
+          <!-- /.col-md-6 -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
     </div>
-    <!-- /.content-wrapper -->
+    <!-- /.content -->
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-      <!-- Control sidebar content goes here -->
-      <div class="p-3">
-        <h5>Title</h5>
-        <p>Sidebar content</p>
-      </div>
-    </aside>
-    <!-- /.control-sidebar -->
 
-    <!-- Main Footer -->
-    <footer class="main-footer">
-      <!-- To the right -->
-      
-      <!-- Default to the left -->
-      <strong>Copyright &copy; 2024 <a href="https://adminlte.io">TIM MPTI</a>.</strong> All rights reserved.
-    </footer>
+    <!--  -->
+    <!--  -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+    <div class="p-3">
+      <h5>Title</h5>
+      <p>Sidebar content</p>
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2024 <a href="https://adminlte.io">TIM MPTI</a>.</strong> All rights reserved.
+  </footer>
   </div>
   <!-- ./wrapper -->
 
@@ -555,89 +618,95 @@ if (!$data_profil) {
     });
   </script>
   <script>
-   $(document).ready(function () {
-    // Fetch provinces on page load
-    $.ajax({
-      type: 'POST',
-      url: 'dataprovinsi.php',
-      success: function (hasil_provinsi) {
-        // Populate the dropdown
-        $("select[name=nama_provinsi]").html('<option value="">Pilih Provinsi</option>' + hasil_provinsi);
-      },
-      error: function (xhr, status, error) {
-        console.error("Error fetching provinces: ", error);
-        alert("Gagal memuat data provinsi.");
-      },
+    $(document).ready(function() {
+      // Fetch provinces on page load
+      $.ajax({
+        type: 'POST',
+        url: 'dataprovinsi.php',
+        success: function(hasil_provinsi) {
+          // Populate the dropdown
+          $("select[name=nama_provinsi]").html('<option value="">Pilih Provinsi</option>' + hasil_provinsi);
+        },
+        error: function(xhr, status, error) {
+          console.error("Error fetching provinces: ", error);
+          alert("Gagal memuat data provinsi.");
+        },
+      });
+
+
+      // When a province is selected, fetch data for districts
+      $("select[name=nama_provinsi]").on("change", function() {
+        var id_provinsi_terpilih = $("option:selected", this).attr("id_provinsi");
+
+        if (id_provinsi_terpilih) {
+          $.ajax({
+            type: 'POST',
+            url: 'datakabupaten.php',
+            data: {
+              id_provinsi: id_provinsi_terpilih
+            },
+            success: function(hasil_kabupaten) {
+              $("select[name=nama_kabupaten]").html(hasil_kabupaten);
+            },
+            error: function(xhr, status, error) {
+              console.error("Error fetching districts: ", error);
+              alert("Gagal memuat data kabupaten.");
+            },
+          });
+        } else {
+          $("select[name=nama_kabupaten]").html('<option value="">Pilih Kabupaten</option>');
+        }
+      });
+
+      // When a district is selected, fetch data for sub-districts
+      $("select[name=nama_kabupaten]").on("change", function() {
+        var id_kabupaten_terpilih = $("option:selected", this).attr("id_kabupaten");
+
+        if (id_kabupaten_terpilih) {
+          $.ajax({
+            type: 'POST',
+            url: 'datakecamatan.php',
+            data: {
+              id_kabupaten: id_kabupaten_terpilih
+            },
+            success: function(hasil_kecamatan) {
+              $("select[name=nama_kecamatan]").html(hasil_kecamatan);
+            },
+            error: function(xhr, status, error) {
+              console.error("Error fetching sub-districts: ", error);
+              alert("Gagal memuat data kecamatan.");
+            },
+          });
+        } else {
+          $("select[name=nama_kecamatan]").html('<option value="">Pilih Kecamatan</option>');
+        }
+      });
+
+      // When a sub-district is selected, fetch data for villages
+      $("select[name=nama_kecamatan]").on("change", function() {
+        var id_kecamatan_terpilih = $("option:selected", this).attr("id_kecamatan");
+
+        if (id_kecamatan_terpilih) {
+          $.ajax({
+            type: 'POST',
+            url: 'datadesa.php',
+            data: {
+              id_kecamatan: id_kecamatan_terpilih
+            },
+            success: function(hasil_desa) {
+              $("select[name=nama_desa]").html(hasil_desa);
+            },
+            error: function(xhr, status, error) {
+              console.error("Error fetching villages: ", error);
+              alert("Gagal memuat data desa.");
+            },
+          });
+        } else {
+          $("select[name=nama_desa]").html('<option value="">Pilih Desa</option>');
+        }
+      });
     });
-  
-
-    // When a province is selected, fetch data for districts
-    $("select[name=nama_provinsi]").on("change", function () {
-      var id_provinsi_terpilih = $("option:selected", this).attr("id_provinsi");
-
-      if (id_provinsi_terpilih) {
-        $.ajax({
-          type: 'POST',
-          url: 'datakabupaten.php',
-          data: { id_provinsi: id_provinsi_terpilih },
-          success: function (hasil_kabupaten) {
-            $("select[name=nama_kabupaten]").html(hasil_kabupaten);
-          },
-          error: function (xhr, status, error) {
-            console.error("Error fetching districts: ", error);
-            alert("Gagal memuat data kabupaten.");
-          },
-        });
-      } else {
-        $("select[name=nama_kabupaten]").html('<option value="">Pilih Kabupaten</option>');
-      }
-    });
-
-    // When a district is selected, fetch data for sub-districts
-    $("select[name=nama_kabupaten]").on("change", function () {
-      var id_kabupaten_terpilih = $("option:selected", this).attr("id_kabupaten");
-
-      if (id_kabupaten_terpilih) {
-        $.ajax({
-          type: 'POST',
-          url: 'datakecamatan.php',
-          data: { id_kabupaten: id_kabupaten_terpilih },
-          success: function (hasil_kecamatan) {
-            $("select[name=nama_kecamatan]").html(hasil_kecamatan);
-          },
-          error: function (xhr, status, error) {
-            console.error("Error fetching sub-districts: ", error);
-            alert("Gagal memuat data kecamatan.");
-          },
-        });
-      } else {
-        $("select[name=nama_kecamatan]").html('<option value="">Pilih Kecamatan</option>');
-      }
-    });
-
-    // When a sub-district is selected, fetch data for villages
-    $("select[name=nama_kecamatan]").on("change", function () {
-      var id_kecamatan_terpilih = $("option:selected", this).attr("id_kecamatan");
-
-      if (id_kecamatan_terpilih) {
-        $.ajax({
-          type: 'POST',
-          url: 'datadesa.php',
-          data: { id_kecamatan: id_kecamatan_terpilih },
-          success: function (hasil_desa) {
-            $("select[name=nama_desa]").html(hasil_desa);
-          },
-          error: function (xhr, status, error) {
-            console.error("Error fetching villages: ", error);
-            alert("Gagal memuat data desa.");
-          },
-        });
-      } else {
-        $("select[name=nama_desa]").html('<option value="">Pilih Desa</option>');
-      }
-    });
-  });
-</script>
+  </script>
 
 
 

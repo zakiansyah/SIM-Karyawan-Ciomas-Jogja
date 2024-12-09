@@ -1,7 +1,7 @@
 <?php
     if (isset ($_POST['btnSIMPAN'])){
         //mulai proses simpan
-        $sql_simpan = "INSERT INTO lowongans (nama,kategori,deskripsi,persyaratan,tgl_post,tgl_deadline) VALUES (
+        $sql_simpan = "INSERT INTO lowongans (nama_lowongan,kategori,deskripsi,persyaratan,tgl_post,tgl_deadline) VALUES (
             '".$_POST['txtnama']."',
             '".$_POST['txtkategori']."',
             '".$_POST['txtdeskripsi']."',
