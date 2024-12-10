@@ -6,13 +6,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<<<<<<< HEAD
   <link rel="icon" type="image/x-icon" href="https://kompaskerja.com/wp-content/uploads/2019/09/logo-japfa-630x380.jpg">
   <title>PT. Ciomas Adisatwa | Home</title>
-=======
-  <link rel="icon" type="image/x-icon" href="../assets/img/yc.png">
-  <title>PT. Ciomas Adisatwa | Admin</title>
->>>>>>> 820dc73d9d7544b92c4515a7e1a741ee05e0dad0
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -55,7 +50,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="../index3.html" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -63,7 +58,7 @@
     </ul>
 
     <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
+    <!-- <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
         <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
         <div class="input-group-append">
@@ -72,7 +67,7 @@
           </button>
         </div>
       </div>
-    </form>
+    </form> -->
 
     <ul class="navbar-nav">
       <li class="nav-item d-none d-sm-inline-block">
@@ -102,7 +97,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="../index3.html" class="brand-link">
+    <a href="#" class="brand-link">
       <img src="../assets/img/logo ciomas.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">PT. Ciomas Adisatwa</span>
     </a>
@@ -240,11 +235,10 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.1.0-rc
-    </div>
-    <strong>Pekael &copy; <?php echo date('Y') ?> <a href="">201753057</a>.</strong> All rights reserved.
-  </footer>
+      <div class="float-right d-none d-sm-block">
+      </div>
+      <strong>TIM MPTI &copy; <?php echo date('Y') ?> <a href="">PT Ciomas Adisatwa</a>.</strong> All rights reserved.
+    </footer>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

@@ -104,9 +104,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                                 // echo '<img src="data:image/jpeg;base64,'.base64_encode( $data['foto'] ).'"/>';
 
-                                echo '<img class="profile-user-img img-fluid img-circle"
-                        src="data:image/jpeg;base64,' . base64_encode($data['foto']) . '"
-                        alt="User profile picture">';
+                        //         echo '<img class="profile-user-img img-fluid img-circle"
+                        // src="data:image/jpeg;base64,' . base64_encode($data['foto']) . '"
+                        // alt="User profile picture">';
                                 ?>
                               </div>
 
@@ -116,14 +116,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                               <ul class="list-group list-group-unbordered mb-3">
                                 <li class="list-group-item">
-                                  <b>Email</b> <a class="float-right">1,322</a>
+                                  <b>Email</b> <a class="float-right"> <?php echo $_SESSION['email']; ?></a>
                                 </li>
-                                <li class="list-group-item">
+                                <!-- <li class="list-group-item">
                                   <b>No HP</b> <a class="float-right">543</a>
-                                </li>
+                                </li> -->
                               </ul>
 
-                              <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
+                              <!-- <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a> -->
                             </div>
                             <!-- /.card-body -->
                           </div>
@@ -139,7 +139,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                               <div class="card-header p-2">
                                 <ul class="nav nav-pills">
                                   <li class="nav-item"><a class="nav-link active" href="#profil" data-toggle="tab">Profil</a></li>
-                                  <li class="nav-item"><a class="nav-link" href="#ubahp" data-toggle="tab">Ubah Profil</a></li>
+                                  <!-- <li class="nav-item"><a class="nav-link" href="#ubahp" data-toggle="tab">Ubah Profil</a></li> -->
                                 </ul>
                               </div><!-- /.card-header -->
                               <div class="card-body">

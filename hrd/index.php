@@ -61,7 +61,7 @@ include '../koneksi.php';
       </ul>
 
       <!-- SEARCH FORM -->
-      <form class="form-inline ml-3">
+      <!-- <form class="form-inline ml-3">
         <div class="input-group input-group-sm">
           <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
           <div class="input-group-append">
@@ -70,7 +70,7 @@ include '../koneksi.php';
             </button>
           </div>
         </div>
-      </form>
+      </form> -->
 
       <ul class="navbar-nav">
         <li class="nav-item d-none d-sm-inline-block">
@@ -102,7 +102,7 @@ include '../koneksi.php';
       <!-- Brand Logo -->
       <a href="#" class="brand-link">
         <img src="../assets/img/logo ciomas.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">PT Ciomas Adisatwa</span>
+        <span class="brand-text font-weight-light">PT. Ciomas Adisatwa</span>
       </a>
 
       <!-- Sidebar -->
@@ -323,7 +323,6 @@ include '../koneksi.php';
     <!-- /.content-wrapper -->
     <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
-        <b>Version</b> 3.1.0-rc
       </div>
       <strong>TIM MPTI &copy; <?php echo date('Y') ?> <a href="">PT Ciomas Adisatwa</a>.</strong> All rights reserved.
     </footer>
