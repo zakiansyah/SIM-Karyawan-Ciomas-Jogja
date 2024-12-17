@@ -20,7 +20,7 @@
     }else if (isset ($_POST['btnUBAH'])){
         //mulai proses ubah
         $sql_ubah = "UPDATE lowongans SET
-            nama='".$_POST['txtnama']."',
+            nama_lowongan='".$_POST['txtnama']."',
             kategori='".$_POST['txtkategori']."',
             deskripsi='".$_POST['txtdeskripsi']."',
             persyaratan='".$_POST['txtpersyaratan']."',
