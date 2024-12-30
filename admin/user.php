@@ -74,13 +74,6 @@
                         }
                     ?>
                 </tbody>
-                <tfoot>
-                <th width="10%">No</th>
-                <th width="25%">Nama</th>
-                <th width="30%">Email</th>
-                <th width="20%">Hak Akses</th>
-                <th width="15%">Aksi</th>
-                </tfoot>
             </table>
             </div>
             <!-- /.card-body -->

@@ -75,7 +75,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             <div class="card card-primary card-outline">
                 <div class="card-header">
-                <h5 class="card-title m-0">Lamanar Pekerjaan</h5>
+                <h5 class="card-title m-0">Lamaran Pekerjaan</h5>
                 </div>
                 <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">

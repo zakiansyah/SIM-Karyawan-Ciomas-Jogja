@@ -104,9 +104,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                                 // echo '<img src="data:image/jpeg;base64,'.base64_encode( $data['foto'] ).'"/>';
 
-                        //         echo '<img class="profile-user-img img-fluid img-circle"
-                        // src="data:image/jpeg;base64,' . base64_encode($data['foto']) . '"
-                        // alt="User profile picture">';
+                                //         echo '<img class="profile-user-img img-fluid img-circle"
+                                // src="data:image/jpeg;base64,' . base64_encode($data['foto']) . '"
+                                // alt="User profile picture">';
                                 ?>
                               </div>
 
@@ -459,29 +459,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
                               <div class="row">
                                 <div class="col-md-6">
                                   <div class="form-group">
-                                    <div class="form-group">
-                                      <label for="exampleSelectBorder">Status</label>
-                                      <select class="custom-select form-control" name="txtstatus" id="exampleSelectBorder" required>
-                                        <option value="" selected disabled>Pilih Status</option>
-                                        <option>Belum Kawin</option>
-                                        <option>Kawin</option>
-                                        <option>Cerai Hidup</option>
-                                        <option>Cerai Mati</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-6">
-                                    <div class="form-group">
-                                      <label for="exampleInputPassword1">Nomor HP</label>
-                                      <input type="tel" class="form-control" name="txthp" id="exampleInputPassword1" placeholder="Masukkan Nomor HP" required>
-                                    </div>
+                                    <label for="exampleSelectBorder">Status</label>
+                                    <select class="custom-select form-control" name="txtstatus" id="exampleSelectBorder" required>
+                                      <option value="" selected disabled>Pilih Status</option>
+                                      <option>Belum Kawin</option>
+                                      <option>Kawin</option>
+                                      <option>Cerai Hidup</option>
+                                      <option>Cerai Mati</option>
+                                    </select>
                                   </div>
                                 </div>
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="exampleInputPassword1">Nomor HP</label>
+                                    <input type="tel" class="form-control" name="txthp" id="exampleInputPassword1" placeholder="Masukkan Nomor HP" required>
+                                  </div>
+                                </div>
+                              </div>
 
-                                <!-- Tombol Submit -->
+                              <!-- Tombol Submit -->
+                              <div class="d-flex justify-content-end">
                                 <button type="submit" name="btnSimpan" class="btn btn-primary">Submit</button>
                               </div>
-                              <!-- /.card-body -->
+
                           </form>
                         </div>
                       <?php endif ?>
@@ -670,9 +670,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
       });
     });
   </script>
-
-
-
 </body>
 
 </html>
